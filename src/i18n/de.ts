@@ -70,7 +70,9 @@ const data = {
         photosPageTitle: "Wo deine Erinnerungen leben",
         photosPageSubtitle: "Halte deine Lieblingsmomente fest und erlebe sie mit Leichtigkeit erneut",
         homepage: "Startseite",
-        improveTranslations: "Übersetzungen verbessern"
+        improveTranslations: "Übersetzungen verbessern",
+        cloudPageTitle: "Mein Digitaler Schatzspeicher",
+        cloudPageSubtitle: "Bewahre deine wichtigen Dateien sicher auf und greife jederzeit und überall darauf zu."
     }
 };
 

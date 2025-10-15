@@ -70,7 +70,9 @@ const data = {
         photosPageTitle: "思い出が生きる場所",
         photosPageSubtitle: "お気に入りの瞬間を簡単にキャプチャして振り返りましょう。",
         homepage: "ホームページ",
-        improveTranslations: "翻訳を改善"
+        improveTranslations: "翻訳を改善",
+        cloudPageTitle: "デジタルの宝箱",
+        cloudPageSubtitle: "大切なファイルを安全に保管し、いつでもどこでもアクセスできます。"
     }
 };
 

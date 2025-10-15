@@ -68,7 +68,9 @@ const data = {
         photosPageTitle: "나의 모든 추억이 담기는 곳",
         photosPageSubtitle: "소중한 순간을 간편하게 기록하고, 언제든 추억하세요.",
         homepage: "홈페이지",
-        improveTranslations: "번역 개선하기"
+        improveTranslations: "번역 개선하기",
+        cloudPageTitle: "나만의 디지털 보물창고",
+        cloudPageSubtitle: "중요한 파일을 안전하게 보관하고, 언제 어디서나 꺼내보세요."
     }
 };
 

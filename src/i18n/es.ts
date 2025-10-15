@@ -69,7 +69,9 @@ const data = {
         photosPageTitle: "Donde viven tus recuerdos",
         photosPageSubtitle: "Captura y revive tus momentos favoritos con facilidad.",
         homepage: "Página principal",
-        improveTranslations: "Mejorar traducciones"
+        improveTranslations: "Mejorar traducciones",
+        cloudPageTitle: "Mi Bóveda Digital de Tesoros",
+        cloudPageSubtitle: "Mantén tus archivos importantes seguros y accede a ellos en cualquier momento y lugar."
     }
 };
 
