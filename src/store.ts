@@ -1,5 +1,14 @@
 import { create } from 'zustand';
-import {MUSIC_DEB, MUSIC_EXE, NOTES_DEB, NOTES_EXE, PHOTOS_DEB, PHOTOS_EXE} from "./downloadLinks";
+import {
+    CLOUD_DEB,
+    CLOUD_EXE,
+    MUSIC_DEB,
+    MUSIC_EXE,
+    NOTES_DEB,
+    NOTES_EXE,
+    PHOTOS_DEB,
+    PHOTOS_EXE
+} from "./downloadLinks";
 
 type Platform = {
     label: string;
@@ -32,6 +41,12 @@ interface AppState {
 
     photosBinaryTypeLinux: BinaryType;
     setPhotosBinaryTypeLinux: (selectedLinuxBinaryType: BinaryType) => void;
+
+    cloudBinaryTypeWindows: BinaryType;
+    setCloudBinaryTypeWindows: (selectedBinaryType: BinaryType) => void;
+
+    cloudBinaryTypeLinux: BinaryType;
+    setCloudBinaryTypeLinux: (selectedLinuxBinaryType: BinaryType) => void;
 }
 
 export const useStore = create<AppState>(set => ({
@@ -49,4 +64,8 @@ export const useStore = create<AppState>(set => ({
     setPhotosBinaryTypeWindows: (selectedBinaryType: BinaryType) => set({ photosBinaryTypeWindows: selectedBinaryType }),
     photosBinaryTypeLinux: PHOTOS_DEB,
     setPhotosBinaryTypeLinux: (selectedLinuxBinaryType: BinaryType) => set({ photosBinaryTypeLinux: selectedLinuxBinaryType }),
+    cloudBinaryTypeWindows: CLOUD_EXE,
+    setCloudBinaryTypeWindows: (selectedBinaryType: BinaryType) => set({cloudBinaryTypeWindows: selectedBinaryType}),
+    cloudBinaryTypeLinux: CLOUD_DEB,
+    setCloudBinaryTypeLinux: (selectedLinuxBinaryType: BinaryType) => set({ cloudBinaryTypeLinux: selectedLinuxBinaryType }),
 }));

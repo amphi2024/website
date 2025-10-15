@@ -17,6 +17,7 @@ import {useStore} from "./store";
 import MusicPage from "./pages/apps/MusicPage.tsx";
 import PhotosPage from "./pages/apps/PhotosPage.tsx";
 import {ImproveTranslationsButton, ReturnButton} from "./components/PageFooterControls.tsx";
+import CloudPage from "./pages/apps/CloudPage.tsx";
 
 const Container = styled.div`
     
@@ -111,6 +112,7 @@ function App() {
                                 <Route path="/notes" element={<NotesPage/>}/>
                                 <Route path="/music" element={<MusicPage/>}/>
                                 <Route path="/photos" element={<PhotosPage/>}/>
+                                <Route path="/cloud" element={<CloudPage/>}/>
                                 <Route path="/server" element={<ServerPage/>}/>
                                 <Route path="/privacy" element={<Privacy/>}/>
                                 <Route path="/terms" element={<Terms/>}/>
