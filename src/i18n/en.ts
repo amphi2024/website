@@ -66,7 +66,9 @@ const data = {
         photosPageTitle: "Where Your Memories Live",
         photosPageSubtitle: "Capture and relive your favorite moments with ease.",
         homepage: "Homepage",
-        improveTranslations: "Improve Translations"
+        improveTranslations: "Improve Translations",
+        cloudPageTitle: "My Digital Treasure Vault",
+        cloudPageSubtitle: "Keep your important files safe and access them anytime, anywhere.",
     }
 };
 

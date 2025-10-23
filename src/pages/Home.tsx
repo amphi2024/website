@@ -290,6 +290,9 @@ function Home() {
                     <Link to={"/photos"}>
                         <AppButton src={"/images/photos-logo.png"} alt={"photos"}/>
                     </Link>
+                    <Link to={"/cloud"}>
+                        <AppButton src={"/images/cloud-logo.png"} alt={"cloud"}/>
+                    </Link>
                 </div>
 
             </HomePageSection>

@@ -62,7 +62,9 @@ const data = {
         notesPageTitle: "Dove vivono tutti i tuoi pensieri",
         notesPageSubtitle: "Scrivi liberamente le tue storie, in qualsiasi momento e luogo.",
         musicPageTitle: "La tua libreria musicale personale",
-        musicPageSubtitle: "Goditi i tuoi preferiti nella migliore qualità — ovunque."
+        musicPageSubtitle: "Goditi i tuoi preferiti nella migliore qualità — ovunque.",
+        cloudPageTitle: "Il Mio Scrigno Digitale dei Tesori",
+        cloudPageSubtitle: "Tieni al sicuro i tuoi file importanti e accedili in qualsiasi momento e ovunque."
     }
 };
 

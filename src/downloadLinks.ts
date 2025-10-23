@@ -1,6 +1,7 @@
 const NOTES_VERSION = "1.1.1";
 const MUSIC_VERSION = "1.0.0";
 const PHOTOS_VERSION = "1.0.0";
+const CLOUD_VERSION = "1.0.0";
 
 export const platforms = [
     {label: "Windows", value: "windows"},
@@ -166,8 +167,62 @@ export const PHOTOS_SNAP = "https://snapcraft.io/amphi-photos";
 
 export const PHOTOS_AUR = "https://aur.archlinux.org/packages/amphi-photos";
 
-export const PHOTOS_APK = `https://github.com/amphi2024/photos/releases/download/v${PHOTOS_VERSION}/Photos-${PHOTOS_VERSION}-Android.apk`;
+export const PHOTOS_APK = `https://github.com/amphi2024/photos/releases/download/v1.0.1/Photos-1.0.1-Android.apk`;
 
 export const PHOTOS_PLAY_STORE = "https://play.google.com/store/apps/details?id=com.amphi.photos";
 
 export const PHOTOS_APPLE_APP_STORE = "https://apps.apple.com/us/app/amphi-photos/id6751439356";
+
+
+
+export const CLOUD_EXE = {
+    label: ".exe",
+    value: `https://github.com/amphi2024/cloud/releases/download/v${CLOUD_VERSION}/Cloud-${CLOUD_VERSION}-Windows-x64.exe`
+};
+
+export const CLOUD_ZIP = {
+    label: ".zip",
+    value: `https://github.com/amphi2024/cloud/releases/download/v${CLOUD_VERSION}/Cloud-${CLOUD_VERSION}-Windows-x64.zip`
+};
+
+export const CLOUD_DMG = `https://github.com/amphi2024/cloud/releases/download/v${CLOUD_VERSION}/Cloud-${CLOUD_VERSION}-macOS.dmg`;
+
+export const CLOUD_TAR = {
+    label: ".tar.gz",
+    value: `https://github.com/amphi2024/cloud/releases/download/v${CLOUD_VERSION}/Cloud-${CLOUD_VERSION}-Linux-x86_64.tar.gz`
+};
+
+export const CLOUD_DEB = {
+    label: ".deb",
+    value: `https://github.com/amphi2024/cloud/releases/download/v${CLOUD_VERSION}/Cloud-${CLOUD_VERSION}-Linux-x86_64.deb`
+};
+
+export const CLOUD_RPM = {
+    label: ".rpm",
+    value: `https://github.com/amphi2024/cloud/releases/download/v${CLOUD_VERSION}/Cloud-${CLOUD_VERSION}-Linux-x86_64.rpm`
+};
+
+export const CLOUD_TAR_ARM = {
+    label: ".tar.gz (ARM64)",
+    value: `https://github.com/amphi2024/cloud/releases/download/v${CLOUD_VERSION}/Cloud-${CLOUD_VERSION}-Linux-arm64.tar.gz`
+};
+
+export const CLOUD_DEB_ARM = {
+    label: ".deb (ARM64)",
+    value: `https://github.com/amphi2024/cloud/releases/download/v${CLOUD_VERSION}/Cloud-${CLOUD_VERSION}-Linux-arm64.deb`
+};
+
+export const CLOUD_RPM_ARM = {
+    label: ".rpm (ARM64)",
+    value: `https://github.com/amphi2024/cloud/releases/download/v${CLOUD_VERSION}/Cloud-${CLOUD_VERSION}-Linux-arm64.rpm`
+};
+
+export const CLOUD_SNAP = "https://snapcraft.io/amphi-cloud";
+
+export const CLOUD_AUR = "https://aur.archlinux.org/packages/amphi-cloud";
+
+export const CLOUD_APK = `https://github.com/amphi2024/cloud/releases/download/v${CLOUD_VERSION}/Cloud-${CLOUD_VERSION}-Android.apk`;
+
+export const CLOUD_PLAY_STORE = "https://play.google.com/store/apps/details?id=com.amphi.cloud";
+
+export const CLOUD_APPLE_APP_STORE = "https://apps.apple.com/us/app/amphi-cloud/id6753095443";
