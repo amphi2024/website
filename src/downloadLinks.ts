@@ -1,4 +1,4 @@
-const NOTES_VERSION = "1.1.1";
+const NOTES_VERSION = "2.0.0";
 const MUSIC_VERSION = "1.0.0";
 const PHOTOS_VERSION = "1.0.0";
 const CLOUD_VERSION = "1.0.0";
@@ -13,54 +13,54 @@ export const platforms = [
 
 export const NOTES_EXE = {
     label: ".exe",
-    value: `https://github.com/amphi2024/notes/releases/download/v${NOTES_VERSION}/notes-windows-x64-${NOTES_VERSION}.exe`
+    value: `https://github.com/amphi2024/notes/releases/download/v${NOTES_VERSION}/Notes-${NOTES_VERSION}-Windows-x64.exe`
 };
 
 export const NOTES_ZIP = {
     label: ".zip",
-    value: `https://github.com/amphi2024/notes/releases/download/v${NOTES_VERSION}/notes-windows-x64-${NOTES_VERSION}.zip`
+    value: `https://github.com/amphi2024/notes/releases/download/v${NOTES_VERSION}/Notes-${NOTES_VERSION}-Windows-x64-${NOTES_VERSION}.zip`
 };
 
 export const SCOOP = "https://github.com/amphi2024/scoop-bucket";
-export const NOTES_DMG = `https://github.com/amphi2024/notes/releases/download/v${NOTES_VERSION}/notes-macos-${NOTES_VERSION}.dmg`;
+export const NOTES_DMG = `https://github.com/amphi2024/notes/releases/download/v${NOTES_VERSION}/Notes-${NOTES_VERSION}-macOS.dmg`;
 export const HOMEBREW_LINK = "https://github.com/amphi2024/homebrew-amphi";
 export const FLATPAK_LINK = "https://github.com/amphi2024/amphi-flatpak";
 
 export const NOTES_TAR = {
     label: ".tar.gz",
-    value: `https://github.com/amphi2024/notes/releases/download/v${NOTES_VERSION}/notes-linux-x64-${NOTES_VERSION}.tar.gz`
+    value: `https://github.com/amphi2024/notes/releases/download/v${NOTES_VERSION}/Notes-${NOTES_VERSION}-Linux-x86_64.tar.gz`
 };
 
 export const NOTES_DEB = {
     label: ".deb",
-    value: `https://github.com/amphi2024/notes/releases/download/v${NOTES_VERSION}/notes-linux-x64-${NOTES_VERSION}.deb`
+    value: `https://github.com/amphi2024/notes/releases/download/v${NOTES_VERSION}/Notes-${NOTES_VERSION}-Linux-x86_64.deb`
 };
 
 export const NOTES_RPM = {
     label: ".rpm",
-    value: `https://github.com/amphi2024/notes/releases/download/v${NOTES_VERSION}/notes-linux-x64-${NOTES_VERSION}.rpm`
+    value: `https://github.com/amphi2024/notes/releases/download/v${NOTES_VERSION}/Notes-${NOTES_VERSION}-Linux-x86_64.rpm`
 };
 
 export const NOTES_TAR_ARM = {
     label: ".tar.gz (ARM64)",
-    value: `https://github.com/amphi2024/notes/releases/download/v${NOTES_VERSION}/notes-linux-arm64-${NOTES_VERSION}.tar.gz`
+    value: `https://github.com/amphi2024/notes/releases/download/v${NOTES_VERSION}/Notes-${NOTES_VERSION}-Linux-arm64.tar.gz`
 };
 
 export const NOTES_DEB_ARM = {
     label: ".deb (ARM64)",
-    value: `https://github.com/amphi2024/notes/releases/download/v${NOTES_VERSION}/notes-linux-arm64-${NOTES_VERSION}.deb`
+    value: `https://github.com/amphi2024/notes/releases/download/v${NOTES_VERSION}/Notes-${NOTES_VERSION}-Linux-arm64.deb`
 };
 
 export const NOTES_RPM_ARM = {
     label: ".rpm (ARM64)",
-    value: `https://github.com/amphi2024/notes/releases/download/v${NOTES_VERSION}/notes-linux-arm64-${NOTES_VERSION}.rpm`
+    value: `https://github.com/amphi2024/notes/releases/download/v${NOTES_VERSION}/Notes-${NOTES_VERSION}-Linux-arm64.rpm`
 };
 
 export const NOTES_SNAP = "https://snapcraft.io/amphi-notes";
 
 export const NOTES_AUR = "https://aur.archlinux.org/packages/amphi-notes";
 
-export const NOTES_APK = `https://github.com/amphi2024/notes/releases/download/v${NOTES_VERSION}/notes-android-${NOTES_VERSION}.apk`;
+export const NOTES_APK = `https://github.com/amphi2024/notes/releases/download/v${NOTES_VERSION}/Notes-${NOTES_VERSION}-Android.apk`;
 
 export const NOTES_PLAY_STORE = "https://play.google.com/store/apps/details?id=com.amphi.notes";
 
