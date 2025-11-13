@@ -40,7 +40,7 @@ export default function ServerPage() {
                 }}/>
 
                 <DownloadButton onClick={() => {
-                    window.open("https://github.com/amphi2024/server/releases/download/v1.3.0/server-1.3.0.jar", "_blank");
+                    window.open("https://github.com/amphi2024/server/releases/download/v2.0.0/server-2.0.0.jar", "_blank");
                 }}/>
 
                 <LinkButton onClick={() => {
