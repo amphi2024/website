@@ -254,7 +254,7 @@ function Home() {
                     {t("homePageSection3Subtitle")}
                 </p>
 
-                <HomePageImage src={"/images/homepage.png"} alt="homepage banner" />
+                <HomePageImage src={"/images/homepage.webp"} alt="homepage banner" />
 
             </HomePageSection>
 

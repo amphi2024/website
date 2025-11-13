@@ -69,8 +69,8 @@ export default function NotesPage() {
     }, [t, location]);
     const {selectedPlatform, setSelectedPlatform, notesBinaryTypeWindows, notesBinaryTypeLinux} = useStore();
     const preview = selectedPlatform.value === "macos" || selectedPlatform.value === "ios"
-        ? "/images/notes-preview-apple.png"
-        : "/images/notes-preview-libre.png";
+        ? "/images/notes-preview-apple.webp"
+        : "/images/notes-preview-libre.webp";
     const bottomRef = useRef<HTMLDivElement>(null);
     const scrollToBottom = () => {
         bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
