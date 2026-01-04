@@ -1,5 +1,5 @@
 const NOTES_VERSION = "2.0.0";
-const MUSIC_VERSION = "1.0.0";
+const MUSIC_VERSION = "2.0.0";
 const PHOTOS_VERSION = "1.0.0";
 const CLOUD_VERSION = "1.0.0";
 
@@ -69,51 +69,51 @@ export const NOTES_APPLE_APP_STORE = "https://apps.apple.com/app/amphi-notes/id6
 
 export const MUSIC_EXE = {
     label: ".exe",
-    value: `https://github.com/amphi2024/music/releases/download/v${MUSIC_VERSION}/music-windows-x64-${MUSIC_VERSION}.exe`
+    value: `https://github.com/amphi2024/music/releases/download/v${MUSIC_VERSION}/Music-${MUSIC_VERSION}-Windows-x64.exe`
 };
 
 export const MUSIC_ZIP = {
     label: ".zip",
-    value: `https://github.com/amphi2024/music/releases/download/v${MUSIC_VERSION}/music-windows-x64-${MUSIC_VERSION}.zip`
+    value: `https://github.com/amphi2024/music/releases/download/v${MUSIC_VERSION}/Music-${MUSIC_VERSION}-Windows-x64.zip`
 };
 
-export const MUSIC_DMG = `https://github.com/amphi2024/music/releases/download/v${MUSIC_VERSION}/music-macos-${MUSIC_VERSION}.dmg`;
+export const MUSIC_DMG = `https://github.com/amphi2024/music/releases/download/v${MUSIC_VERSION}/Music-${MUSIC_VERSION}-macOS.dmg`;
 
 export const MUSIC_TAR = {
-    label: ".tar.zst",
-    value: `https://github.com/amphi2024/music/releases/download/v${MUSIC_VERSION}/music-linux-x64-${MUSIC_VERSION}.tar.zst`
+    label: ".tar.gz",
+    value: `https://github.com/amphi2024/music/releases/download/v${MUSIC_VERSION}/Music-${MUSIC_VERSION}-Linux-x86_64.tar.gz`
 };
 
 export const MUSIC_DEB = {
     label: ".deb",
-    value: `https://github.com/amphi2024/music/releases/download/v${MUSIC_VERSION}/music-linux-x64-${MUSIC_VERSION}.deb`
+    value: `https://github.com/amphi2024/music/releases/download/v${MUSIC_VERSION}/Music-${MUSIC_VERSION}-Linux-x86_64.deb`
 };
 
 export const MUSIC_RPM = {
     label: ".rpm",
-    value: `https://github.com/amphi2024/music/releases/download/v${MUSIC_VERSION}/music-linux-x64-${MUSIC_VERSION}.rpm`
+    value: `https://github.com/amphi2024/music/releases/download/v${MUSIC_VERSION}/Music-${MUSIC_VERSION}-Linux-x86_64.rpm`
 };
 
 export const MUSIC_TAR_ARM = {
-    label: ".tar.zst (ARM64)",
-    value: `https://github.com/amphi2024/music/releases/download/v${MUSIC_VERSION}/music-linux-arm64-${MUSIC_VERSION}.tar.zst`
+    label: ".tar.gz (ARM64)",
+    value: `https://github.com/amphi2024/music/releases/download/v${MUSIC_VERSION}/Music-${MUSIC_VERSION}-Linux-arm64.tar.gz`
 };
 
 export const MUSIC_DEB_ARM = {
     label: ".deb (ARM64)",
-    value: `https://github.com/amphi2024/music/releases/download/v${MUSIC_VERSION}/music-linux-arm64-${MUSIC_VERSION}.deb`
+    value: `https://github.com/amphi2024/music/releases/download/v${MUSIC_VERSION}/Music-${MUSIC_VERSION}-Linux-arm64.deb`
 };
 
 export const MUSIC_RPM_ARM = {
     label: ".rpm (ARM64)",
-    value: `https://github.com/amphi2024/music/releases/download/v${MUSIC_VERSION}/music-linux-arm64-${MUSIC_VERSION}.rpm`
+    value: `https://github.com/amphi2024/music/releases/download/v${MUSIC_VERSION}/Music-${MUSIC_VERSION}-Linux-arm64.rpm`
 };
 
 export const MUSIC_SNAP = "https://snapcraft.io/amphi-music";
 
 export const MUSIC_AUR = "https://aur.archlinux.org/packages/amphi-music";
 
-export const MUSIC_APK = `https://github.com/amphi2024/music/releases/download/v${MUSIC_VERSION}/music-android-${MUSIC_VERSION}.apk`;
+export const MUSIC_APK = `https://github.com/amphi2024/music/releases/download/v${MUSIC_VERSION}/Music-${MUSIC_VERSION}-Android.apk`;
 
 export const MUSIC_PLAY_STORE = "https://play.google.com/store/apps/details?id=com.amphi.music";
 
