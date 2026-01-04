@@ -9,7 +9,7 @@ import {
     LinkButton,
     SelectField
 } from "../../components/AppDownload.tsx";
-import { useLocation} from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import {SelectButton} from "../../components/SelectButton.tsx";
 import {useStore} from "../../store";
 import {
@@ -42,19 +42,26 @@ const linuxBinaryTypes = [
 ];
 
 function SelectPlatformButtonForMusic() {
-    const {selectedPlatform, musicBinaryTypeWindows, setMusicBinaryTypeWindows, musicBinaryTypeLinux, setMusicBinaryTypeLinux} = useStore();
+    const {
+        selectedPlatform,
+        musicBinaryTypeWindows,
+        setMusicBinaryTypeWindows,
+        musicBinaryTypeLinux,
+        setMusicBinaryTypeLinux
+    } = useStore();
 
-    if(selectedPlatform.value === "windows") {
+    if (selectedPlatform.value === "windows") {
         return (
-            <SelectButton items={windowsBinaryTypes} selectedItem={musicBinaryTypeWindows} setSelectedItem={setMusicBinaryTypeWindows}/>
+            <SelectButton items={windowsBinaryTypes} selectedItem={musicBinaryTypeWindows}
+                          setSelectedItem={setMusicBinaryTypeWindows}/>
         );
     }
-    if(selectedPlatform.value === "linux") {
+    if (selectedPlatform.value === "linux") {
         return (
-            <SelectButton items={linuxBinaryTypes} selectedItem={musicBinaryTypeLinux} setSelectedItem={setMusicBinaryTypeLinux}/>
+            <SelectButton items={linuxBinaryTypes} selectedItem={musicBinaryTypeLinux}
+                          setSelectedItem={setMusicBinaryTypeLinux}/>
         );
-    }
-    else {
+    } else {
         return null;
     }
 
@@ -69,12 +76,19 @@ export default function MusicPage() {
         document.title = "Amphi Music";
     }, [t, location]);
     const {selectedPlatform, setSelectedPlatform, musicBinaryTypeWindows, musicBinaryTypeLinux} = useStore();
-    const preview = selectedPlatform.value === "macos" || selectedPlatform.value === "ios"
-        ? "/images/music-preview-apple.png"
-        : "/images/music-preview-libre.png";
+    let preview: string = "/images/music-preview-android-windows.webp";
+    switch (selectedPlatform.value) {
+        case "macos":
+        case "ios":
+            preview = "/images/music-preview-apple.webp";
+            break;
+        case "linux":
+            preview = "/images/music-preview-linux.webp";
+            break;
+    }
     const bottomRef = useRef<HTMLDivElement>(null);
     const scrollToBottom = () => {
-        bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+        bottomRef.current?.scrollIntoView({behavior: 'smooth'});
     };
 
     return (
@@ -91,7 +105,8 @@ export default function MusicPage() {
                 <DownloadFieldContainer>
 
                     <SelectField>
-                        <SelectButton items={platforms} selectedItem={selectedPlatform} setSelectedItem={setSelectedPlatform}/>
+                        <SelectButton items={platforms} selectedItem={selectedPlatform}
+                                      setSelectedItem={setSelectedPlatform}/>
 
                         <SelectPlatformButtonForMusic/>
 
@@ -118,10 +133,9 @@ export default function MusicPage() {
                     }}/>
 
                     <PackageManagerButton onClick={() => {
-                        if(selectedPlatform.value === "android") {
+                        if (selectedPlatform.value === "android") {
                             window.open(MUSIC_APK, "_blank");
-                        }
-                        else {
+                        } else {
                             scrollToBottom();
                         }
                     }}/>
@@ -142,15 +156,15 @@ export default function MusicPage() {
                 <PackageManagers>
                     <PackageManagerSection platform={"Windows"} items={[
                         {label: "Scoop", link: SCOOP},
-                    ]} />
+                    ]}/>
                     <PackageManagerSection platform={"macOS"} items={[
                         {label: "Homebrew", link: HOMEBREW_LINK},
-                    ]} />
+                    ]}/>
                     <PackageManagerSection platform={"Linux"} items={[
                         {label: "Flatpak", link: FLATPAK_LINK},
                         {label: "Snap Store", link: MUSIC_SNAP},
                         {label: "AUR", link: MUSIC_AUR},
-                    ]} />
+                    ]}/>
                 </PackageManagers>
             </AppPageSection>
 
