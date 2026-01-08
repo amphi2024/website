@@ -13,6 +13,8 @@ import {faArrowDown} from "@fortawesome/free-solid-svg-icons";
 import {useEffect, useRef} from "react";
 import {useTranslation} from "react-i18next";
 
+const serverVersion = "3.0.1";
+
 export default function ServerPage() {
 
     const [t] = useTranslation();
@@ -40,7 +42,7 @@ export default function ServerPage() {
                 }}/>
 
                 <DownloadButton onClick={() => {
-                    window.open("https://github.com/amphi2024/server/releases/download/v3.0.0/server-3.0.0.jar", "_blank");
+                    window.open(`https://github.com/amphi2024/server/releases/download/v${serverVersion}/server-${serverVersion}.jar`, "_blank");
                 }}/>
 
                 <LinkButton onClick={() => {
