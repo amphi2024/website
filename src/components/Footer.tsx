@@ -43,7 +43,7 @@ function Footer() {
     return (
         <AppFooter className="AppFooter">
             <div>
-                © 2024 - 2025 Amphi
+                © 2026 Amphi
             </div>
             <div>
                 <Link to={"/privacy"}>
