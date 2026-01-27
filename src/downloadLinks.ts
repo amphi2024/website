@@ -1,6 +1,6 @@
 const NOTES_VERSION = "2.1.0";
 const MUSIC_VERSION = "2.0.0";
-const PHOTOS_VERSION = "1.0.0";
+const PHOTOS_VERSION = "2.0.0";
 const CLOUD_VERSION = "1.0.0";
 
 export const platforms = [
@@ -167,7 +167,7 @@ export const PHOTOS_SNAP = "https://snapcraft.io/amphi-photos";
 
 export const PHOTOS_AUR = "https://aur.archlinux.org/packages/amphi-photos";
 
-export const PHOTOS_APK = `https://github.com/amphi2024/photos/releases/download/v1.0.1/Photos-1.0.1-Android.apk`;
+export const PHOTOS_APK = `https://github.com/amphi2024/photos/releases/download/v${PHOTOS_VERSION}/Photos-${PHOTOS_VERSION}-Android.apk`;
 
 export const PHOTOS_PLAY_STORE = "https://play.google.com/store/apps/details?id=com.amphi.photos";
 
