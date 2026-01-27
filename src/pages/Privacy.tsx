@@ -15,7 +15,7 @@ export default function Privacy() {
         <Document>
             <h1>Privacy Policy</h1>
             <h5>
-                July 25, 2025
+                January 27, 2026
             </h5>
 
             <h4>
@@ -68,7 +68,7 @@ export default function Privacy() {
             </h2>
             <p>
                 If you have any questions about this Privacy Policy, You can contact us at the following email:
-                amphiprioninae2024@gmail.com
+                support@amphi.site
             </p>
         </Document>
     );
