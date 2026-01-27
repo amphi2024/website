@@ -1,4 +1,4 @@
-const NOTES_VERSION = "2.0.0";
+const NOTES_VERSION = "2.1.0";
 const MUSIC_VERSION = "2.0.0";
 const PHOTOS_VERSION = "1.0.0";
 const CLOUD_VERSION = "1.0.0";
