@@ -13,7 +13,7 @@ import {faArrowDown} from "@fortawesome/free-solid-svg-icons";
 import {useEffect, useRef} from "react";
 import {useTranslation} from "react-i18next";
 
-const serverVersion = "3.0.1";
+const serverVersion = "3.1.0";
 
 export default function ServerPage() {
 
