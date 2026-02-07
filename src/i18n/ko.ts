@@ -64,7 +64,7 @@ const data = {
         musicPageSubtitle: "좋아하는 음악을 모아, 언제나 최고의 음질로 즐겨보세요.",
         serverPageTitle: "제2의 뇌, 디지털 속 나만의 집",
         serverPageSubtitle: "노트, 음악, 사진, 파일까지, 어디서든 나만의 공간에서 즐기세요",
-        nextSteps: "다음단계",
+        setupGuide: "셋업 가이드",
         photosPageTitle: "나의 모든 추억이 담기는 곳",
         photosPageSubtitle: "소중한 순간을 간편하게 기록하고, 언제든 추억하세요.",
         homepage: "홈페이지",

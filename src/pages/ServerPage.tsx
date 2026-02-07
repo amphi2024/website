@@ -1,31 +1,38 @@
 import {
     AppPage,
     AppPageSection,
-    Command,
-    DownloadLink,
-    DownloadLinkIcon,
     LinkButton
 } from "../components/AppDownload.tsx";
-import {faCircleDown} from "@fortawesome/free-regular-svg-icons";
 import {DownloadButton} from "../components/DownloadButton.tsx";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faArrowDown} from "@fortawesome/free-solid-svg-icons";
-import {useEffect, useRef} from "react";
+import {useEffect} from "react";
 import {useTranslation} from "react-i18next";
+import styled from "styled-components";
 
 const serverVersion = "3.1.0";
 
+const SetupGuide = styled.button`
+    width: 220px;
+    border-radius: var(--download-button-border-radius);
+    height: 40px;
+    background-color: var(--card-background-color);
+    font-size: 18px;
+    margin-top: 8px;
+
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: 0.8;
+    }
+`;
+
 export default function ServerPage() {
 
-    const [t] = useTranslation();
-    const nextStepsRef = useRef<HTMLDivElement>(null);
-    const scrollToNextSteps = () => {
-        nextStepsRef.current?.scrollIntoView({ behavior: 'smooth' });
-    }
+    const [t, i18n] = useTranslation();
 
     useEffect(() => {
         document.title = "Server for Amphi Apps";
     }, []);
+
 
     return (
         <AppPage>
@@ -47,56 +54,24 @@ export default function ServerPage() {
 
                 <LinkButton onClick={() => {
                     window.open("https://github.com/amphi2024/server/releases", "_blank");
-                }}>{t("allReleases")}
+                }}>{serverVersion} / {new Date(2026, 1, 3).toLocaleDateString(i18n.language, {
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric'})}
                 </LinkButton>
 
-                <LinkButton onClick={scrollToNextSteps}>
-                    <FontAwesomeIcon icon={faArrowDown}/>
-                    {t("nextSteps")}
-                </LinkButton>
-            </AppPageSection>
+                <div>
+                    <SetupGuide style={{
+                        marginRight: "10px"
+                    }} onClick={() => {
+                        window.open("https://github.com/amphi2024/server", "_blank");
+                    }}>{t("setupGuide")}</SetupGuide>
 
-            <AppPageSection ref={nextStepsRef}>
-
-                <h1>
-                    Finish the Setup
-                </h1>
-
-                <h2>1. Download JRE</h2>
-
-                <p>
-                    Choose your preferred JRE (you can pick either Adoptium or Azul)
-                </p>
-
-                <DownloadLink href={"https://adoptium.net/temurin/releases/?package=jre"} target={"_blank"}
-                              rel={"noreferrer"}>
-                    <DownloadLinkIcon icon={faCircleDown}/>Adoptium
-                </DownloadLink>
-                <DownloadLink href={"https://www.azul.com/downloads/?package=jre"} target={"_blank"} rel={"noreferrer"}>
-                    <DownloadLinkIcon icon={faCircleDown}/>Azul
-                </DownloadLink>
-
-                <p>
-                    Make sure to select the correct version for your operating system and architecture.
-                </p>
-
-                <p>
-
-                </p>
-
-                <h2>2. Run the Server</h2>
-
-                <h3>
-                    Open up the terminal, And run this command
-                </h3>
-
-                <Command>
-                    path/to/your/jre/bin/java -jar server.jar
-                </Command>
-
-                <p>
-                    Also, if you are an advanced user, you can set up options like remote access (e.g., Tailscale or other VPN solutions), port forwarding, or running the server as a system service, depending on your needs.
-                </p>
+                    <SetupGuide onClick={() => {
+                        window.open("https://youtube.com/@amphi2024", "_blank");
+                    }}>{t("youtubeTutorial")}
+                    </SetupGuide>
+                </div>
 
             </AppPageSection>
 
