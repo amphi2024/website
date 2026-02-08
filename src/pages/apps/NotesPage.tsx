@@ -1,5 +1,5 @@
 import {AppPreview} from "../Home.tsx";
-import {useEffect, useRef} from "react";
+import {useEffect} from "react";
 import {useTranslation} from "react-i18next";
 
 import {
@@ -11,70 +11,83 @@ import {
 } from "../../components/AppDownload.tsx";
 import { useLocation} from "react-router-dom";
 import {SelectButton} from "../../components/SelectButton.tsx";
-import {useStore} from "../../store";
+import {type DownloadOption, useStore} from "../../store";
 import {
-    FLATPAK_LINK,
-    HOMEBREW_LINK, NOTES_APK, NOTES_APPLE_APP_STORE, NOTES_AUR,
+    FLATPAK,
+    HOMEBREW, NOTES_APK, NOTES_APPLE_APP_STORE, NOTES_AUR,
     NOTES_DEB,
     NOTES_DEB_ARM, NOTES_DMG,
     NOTES_EXE, NOTES_PLAY_STORE,
     NOTES_RPM, NOTES_RPM_ARM, NOTES_SNAP,
     NOTES_TAR,
-    NOTES_TAR_ARM,
+    NOTES_TAR_ARM, NOTES_VERSION,
     NOTES_ZIP, platforms,
     SCOOP
 } from "../../downloadLinks";
-import {PackageManagerButton, PackageManagers, PackageManagerSection} from "../../components/PackageManager.tsx";
 import {DownloadButton} from "../../components/DownloadButton.tsx";
 
-const windowsBinaryTypes = [
+const downloadOptions: Record<string, DownloadOption[]>  = {
+    windows: [
+        SCOOP,
     NOTES_EXE,
     NOTES_ZIP,
-];
+],
+macos: [
+    HOMEBREW,
+    NOTES_DMG
+],
+    linux: [
+        NOTES_SNAP,
+        FLATPAK,
+        NOTES_AUR,
+        NOTES_DEB,
+        NOTES_RPM,
+        NOTES_TAR,
+        NOTES_DEB_ARM,
+        NOTES_RPM_ARM,
+        NOTES_TAR_ARM
+    ],
+    android: [
+        NOTES_PLAY_STORE,
+        NOTES_APK
+    ],
+    ios: [
+        NOTES_APPLE_APP_STORE
+    ],
+};
 
-const linuxBinaryTypes = [
-    NOTES_DEB,
-    NOTES_RPM,
-    NOTES_TAR,
-    NOTES_DEB_ARM,
-    NOTES_RPM_ARM,
-    NOTES_TAR_ARM
-];
-
-function SelectPlatformButtonForNotes() {
-    const {selectedPlatform, notesBinaryTypeWindows, setNotesBinaryTypeWindows, notesBinaryTypeLinux, setNotesBinaryTypeLinux} = useStore();
-    if(selectedPlatform.value === "windows") {
-        return (
-            <SelectButton items={windowsBinaryTypes} selectedItem={notesBinaryTypeWindows} setSelectedItem={setNotesBinaryTypeWindows}/>
-        );
+function SelectDownloadOption() {
+    const {selectedPlatform, notesDownloadOptions, setNotesDownloadOptions} = useStore();
+    switch (selectedPlatform.value) {
+        case "windows":
+        case "macos":
+        case "linux":
+        case "android":
+            return (
+                <SelectButton items={downloadOptions[selectedPlatform.value]} selectedItem={notesDownloadOptions[selectedPlatform.value]} setSelectedItem={(index) => {
+                    setNotesDownloadOptions({
+                        ...notesDownloadOptions,
+                        [selectedPlatform.value]: downloadOptions[selectedPlatform.value][index]
+                    });
+                }}/>
+            );
+        default:
+            return null;
     }
-    if(selectedPlatform.value === "linux") {
-        return (
-            <SelectButton items={linuxBinaryTypes} selectedItem={notesBinaryTypeLinux} setSelectedItem={setNotesBinaryTypeLinux}/>
-        );
-    }
-    else {
-        return null;
-    }
-
 }
 
 export default function NotesPage() {
 
-    const [t] = useTranslation();
+    const [t, i18n] = useTranslation();
     const location = useLocation();
 
     useEffect(() => {
         document.title = "Amphi Notes";
     }, [t, location]);
-    const {selectedPlatform, setSelectedPlatform, notesBinaryTypeWindows, notesBinaryTypeLinux} = useStore();
+    const {selectedPlatform, setSelectedPlatform, notesDownloadOptions} = useStore();
     const preview = selectedPlatform.value === "macos" || selectedPlatform.value === "ios"
         ? "/images/notes-preview-apple.webp"
         : "/images/notes-preview-libre.webp";
-    const bottomRef = useRef<HTMLDivElement>(null);
-    const scrollToBottom = () => {
-        bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
-    };
 
     return (
         <AppPage>
@@ -90,67 +103,28 @@ export default function NotesPage() {
                 <DownloadFieldContainer>
 
                     <SelectField>
-                        <SelectButton items={platforms} selectedItem={selectedPlatform} setSelectedItem={setSelectedPlatform}/>
+                        <SelectButton items={platforms} selectedItem={selectedPlatform} setSelectedItem={(index) => {
+                            setSelectedPlatform(platforms[index]);
+                        }}/>
 
-                        <SelectPlatformButtonForNotes/>
+                        <SelectDownloadOption/>
 
                     </SelectField>
 
-                    <DownloadButton onClick={() => {
-                        switch (selectedPlatform.value) {
-                            case "windows":
-                                window.open(notesBinaryTypeWindows.value, "_blank");
-                                break;
-                            case "macos":
-                                window.open(NOTES_DMG, "_blank");
-                                break;
-                            case "linux":
-                                window.open(notesBinaryTypeLinux.value, "_blank");
-                                break;
-                            case "android":
-                                window.open(NOTES_PLAY_STORE, "_blank");
-                                break;
-                            case "ios":
-                                window.open(NOTES_APPLE_APP_STORE, "_blank");
-                                break;
-                        }
-                    }}/>
-
-                    <PackageManagerButton onClick={() => {
-                        if(selectedPlatform.value === "android") {
-                            window.open(NOTES_APK, "_blank");
-                        }
-                        else {
-                            scrollToBottom();
-                        }
+                    <DownloadButton downloadOption={notesDownloadOptions[selectedPlatform.value]} onClick={() => {
+                        window.open(notesDownloadOptions[selectedPlatform.value].value, "_blank");
                     }}/>
 
                     <LinkButton onClick={() => {
                         window.open("https://github.com/amphi2024/notes/releases", "_blank");
-                    }}>{t("allReleases")}
+                    }}>{NOTES_VERSION} / {new Date(2026, 0, 27).toLocaleDateString(i18n.language, {
+                        month: 'short',
+                        day: 'numeric',
+                        year: 'numeric'})}
                     </LinkButton>
 
                 </DownloadFieldContainer>
 
-            </AppPageSection>
-
-            <AppPageSection ref={bottomRef}>
-                <h1>
-                    {t("downloadOnPackageManager")}
-                </h1>
-                <PackageManagers>
-                    <PackageManagerSection platform={"Windows"} items={[
-                        {label: "Scoop", link: SCOOP},
-                    ]} />
-                    <PackageManagerSection platform={"macOS"} items={[
-                        {label: "Homebrew", link: HOMEBREW_LINK},
-                    ]} />
-                    <PackageManagerSection platform={"Linux"} items={[
-                        {label: "Flatpak", link: FLATPAK_LINK},
-                        {label: "Snap Store", link: NOTES_SNAP},
-                        {label: "AUR", link: NOTES_AUR},
-                    ]} />
-                </PackageManagers>
             </AppPageSection>
 
         </AppPage>

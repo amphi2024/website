@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {useEffect, useRef, useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faChevronDown} from "@fortawesome/free-solid-svg-icons";
+import type {DownloadOption, Platform} from "../store.ts";
 
 const SelectButtonElement = styled.button`
     width: 134px;
@@ -71,18 +72,17 @@ const MenuItem = styled.div`
     }
 `;
 
-export function SelectButton({ items, selectedItem, setSelectedItem }: { items: { label: string, value: string }[], selectedItem: { label: string, value: string }, setSelectedItem: (item: { label: string, value: string }) => void }) {
+export function SelectButton({ items, selectedItem, setSelectedItem}: { items: (DownloadOption | Platform)[], selectedItem: DownloadOption | Platform, setSelectedItem: (index: number) => void}) {
     const [isOpen, setIsOpen] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
 
     const toggleMenu = () => setIsOpen((prev) => !prev);
 
     const handleSelect = (index: number) => {
-        setSelectedItem(items[index]);
+        setSelectedItem(index);
         setIsOpen(false);
     };
 
-    // Close dropdown when clicking outside
     useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
             if (

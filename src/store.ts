@@ -1,71 +1,78 @@
 import { create } from 'zustand';
 import {
-    CLOUD_DEB,
-    CLOUD_EXE,
-    MUSIC_DEB,
-    MUSIC_EXE,
-    NOTES_DEB,
-    NOTES_EXE,
-    PHOTOS_DEB,
-    PHOTOS_EXE
+    CLOUD_APPLE_APP_STORE,
+    CLOUD_DMG,
+    CLOUD_EXE, CLOUD_PLAY_STORE, CLOUD_SNAP,
+    MUSIC_APPLE_APP_STORE,
+    MUSIC_DMG,
+    MUSIC_EXE, MUSIC_PLAY_STORE, MUSIC_SNAP,
+    NOTES_APPLE_APP_STORE,
+    NOTES_DMG,
+    NOTES_EXE, NOTES_PLAY_STORE, NOTES_SNAP,
+    PHOTOS_APPLE_APP_STORE, PHOTOS_DMG, PHOTOS_EXE, PHOTOS_PLAY_STORE, PHOTOS_SNAP,
 } from "./downloadLinks";
 
-type Platform = {
+export type Platform = {
     label: string;
     value: string;
 };
 
-type BinaryType = {
+export type DownloadOption = {
     label: string;
     value: string;
+    type: string;
 };
 
 interface AppState {
     selectedPlatform: Platform;
     setSelectedPlatform: (selectedPlatform: Platform) => void;
 
-    notesBinaryTypeWindows: BinaryType;
-    setNotesBinaryTypeWindows: (selectedBinaryType: BinaryType) => void;
+    notesDownloadOptions: Record<string, DownloadOption>;
+    setNotesDownloadOptions: (notesDownloadOptions: Record<string, DownloadOption>) => void;
 
-    notesBinaryTypeLinux: BinaryType;
-    setNotesBinaryTypeLinux: (selectedLinuxBinaryType: BinaryType) => void;
+    musicDownloadOptions: Record<string, DownloadOption>;
+    setMusicDownloadOptions: (musicDownloadOptions: Record<string, DownloadOption>) => void;
 
-    musicBinaryTypeWindows: BinaryType;
-    setMusicBinaryTypeWindows: (selectedBinaryType: BinaryType) => void;
+    photosDownloadOptions: Record<string, DownloadOption>;
+    setPhotosDownloadOptions: ( photosDownloadOptions: Record<string, DownloadOption>) => void;
 
-    musicBinaryTypeLinux: BinaryType;
-    setMusicBinaryTypeLinux: (selectedLinuxBinaryType: BinaryType) => void;
-
-    photosBinaryTypeWindows: BinaryType;
-    setPhotosBinaryTypeWindows: (selectedBinaryType: BinaryType) => void;
-
-    photosBinaryTypeLinux: BinaryType;
-    setPhotosBinaryTypeLinux: (selectedLinuxBinaryType: BinaryType) => void;
-
-    cloudBinaryTypeWindows: BinaryType;
-    setCloudBinaryTypeWindows: (selectedBinaryType: BinaryType) => void;
-
-    cloudBinaryTypeLinux: BinaryType;
-    setCloudBinaryTypeLinux: (selectedLinuxBinaryType: BinaryType) => void;
+    cloudDownloadOptions: Record<string, DownloadOption>;
+    setCloudDownloadOptions: (cloudDownloadOptions: Record<string, DownloadOption>) => void;
 }
 
 export const useStore = create<AppState>(set => ({
     selectedPlatform: {label: "Windows", value: "windows"},
-    setSelectedPlatform: (selectedPlatform: BinaryType) => set({ selectedPlatform: selectedPlatform }),
-    notesBinaryTypeWindows: NOTES_EXE,
-    setNotesBinaryTypeWindows: (selectedBinaryType: BinaryType) => set({ notesBinaryTypeWindows: selectedBinaryType }),
-    notesBinaryTypeLinux: NOTES_DEB,
-    setNotesBinaryTypeLinux: (selectedLinuxBinaryType: BinaryType) => set({ notesBinaryTypeLinux: selectedLinuxBinaryType }),
-    musicBinaryTypeWindows: MUSIC_EXE,
-    setMusicBinaryTypeWindows: (selectedBinaryType: BinaryType) => set({ musicBinaryTypeWindows: selectedBinaryType }),
-    musicBinaryTypeLinux: MUSIC_DEB,
-    setMusicBinaryTypeLinux: (selectedLinuxBinaryType: BinaryType) => set({ musicBinaryTypeLinux: selectedLinuxBinaryType }),
-    photosBinaryTypeWindows: PHOTOS_EXE,
-    setPhotosBinaryTypeWindows: (selectedBinaryType: BinaryType) => set({ photosBinaryTypeWindows: selectedBinaryType }),
-    photosBinaryTypeLinux: PHOTOS_DEB,
-    setPhotosBinaryTypeLinux: (selectedLinuxBinaryType: BinaryType) => set({ photosBinaryTypeLinux: selectedLinuxBinaryType }),
-    cloudBinaryTypeWindows: CLOUD_EXE,
-    setCloudBinaryTypeWindows: (selectedBinaryType: BinaryType) => set({cloudBinaryTypeWindows: selectedBinaryType}),
-    cloudBinaryTypeLinux: CLOUD_DEB,
-    setCloudBinaryTypeLinux: (selectedLinuxBinaryType: BinaryType) => set({ cloudBinaryTypeLinux: selectedLinuxBinaryType }),
+    setSelectedPlatform: (selectedPlatform: Platform) => set({ selectedPlatform: selectedPlatform }),
+    notesDownloadOptions: {
+        windows: NOTES_EXE,
+        macos: NOTES_DMG,
+        linux: NOTES_SNAP,
+        android: NOTES_PLAY_STORE,
+        ios: NOTES_APPLE_APP_STORE
+    },
+    musicDownloadOptions: {
+        windows: MUSIC_EXE,
+        macos: MUSIC_DMG,
+        linux: MUSIC_SNAP,
+        android: MUSIC_PLAY_STORE,
+        ios: MUSIC_APPLE_APP_STORE
+    },
+    photosDownloadOptions: {
+        windows: PHOTOS_EXE,
+        macos: PHOTOS_DMG,
+        linux: PHOTOS_SNAP,
+        android: PHOTOS_PLAY_STORE,
+        ios: PHOTOS_APPLE_APP_STORE
+    },
+    cloudDownloadOptions: {
+        windows: CLOUD_EXE,
+        macos: CLOUD_DMG,
+        linux: CLOUD_SNAP,
+        android: CLOUD_PLAY_STORE,
+        ios: CLOUD_APPLE_APP_STORE
+    },
+    setNotesDownloadOptions: (options) => set({ notesDownloadOptions: options }),
+    setMusicDownloadOptions: (options) => set({ musicDownloadOptions: options }),
+    setPhotosDownloadOptions: (options) => set({ photosDownloadOptions: options }),
+    setCloudDownloadOptions: (options) => set({ cloudDownloadOptions: options }),
 }));

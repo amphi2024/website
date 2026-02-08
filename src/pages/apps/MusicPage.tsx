@@ -1,5 +1,5 @@
 import {AppPreview} from "../Home.tsx";
-import {useEffect, useRef} from "react";
+import {useEffect} from "react";
 import {useTranslation} from "react-i18next";
 
 import {
@@ -11,71 +11,80 @@ import {
 } from "../../components/AppDownload.tsx";
 import {useLocation} from "react-router-dom";
 import {SelectButton} from "../../components/SelectButton.tsx";
-import {useStore} from "../../store";
+import {type DownloadOption, useStore} from "../../store";
 import {
-    FLATPAK_LINK,
-    HOMEBREW_LINK, MUSIC_APK, MUSIC_APPLE_APP_STORE, MUSIC_AUR,
+    FLATPAK,
+    HOMEBREW, MUSIC_APK, MUSIC_APPLE_APP_STORE, MUSIC_AUR,
     MUSIC_DEB,
     MUSIC_DEB_ARM, MUSIC_DMG,
     MUSIC_EXE, MUSIC_PLAY_STORE,
     MUSIC_RPM, MUSIC_RPM_ARM, MUSIC_SNAP,
     MUSIC_TAR,
-    MUSIC_TAR_ARM,
+    MUSIC_TAR_ARM, MUSIC_VERSION,
     MUSIC_ZIP, platforms,
     SCOOP
 } from "../../downloadLinks";
-import {PackageManagerButton, PackageManagers, PackageManagerSection} from "../../components/PackageManager.tsx";
 import {DownloadButton} from "../../components/DownloadButton.tsx";
 
-const windowsBinaryTypes = [
-    MUSIC_EXE,
-    MUSIC_ZIP,
-];
+const downloadOptions: Record<string, DownloadOption[]>  = {
+    windows: [
+        SCOOP,
+        MUSIC_EXE,
+        MUSIC_ZIP,
+    ],
+    macos: [
+        HOMEBREW,
+        MUSIC_DMG
+    ],
+    linux: [
+        MUSIC_SNAP,
+        FLATPAK,
+        MUSIC_AUR,
+        MUSIC_DEB,
+        MUSIC_RPM,
+        MUSIC_TAR,
+        MUSIC_DEB_ARM,
+        MUSIC_RPM_ARM,
+        MUSIC_TAR_ARM
+    ],
+    android: [
+        MUSIC_PLAY_STORE,
+        MUSIC_APK
+    ],
+    ios: [
+        MUSIC_APPLE_APP_STORE
+    ],
+};
 
-const linuxBinaryTypes = [
-    MUSIC_DEB,
-    MUSIC_RPM,
-    MUSIC_TAR,
-    MUSIC_DEB_ARM,
-    MUSIC_RPM_ARM,
-    MUSIC_TAR_ARM
-];
-
-function SelectPlatformButtonForMusic() {
-    const {
-        selectedPlatform,
-        musicBinaryTypeWindows,
-        setMusicBinaryTypeWindows,
-        musicBinaryTypeLinux,
-        setMusicBinaryTypeLinux
-    } = useStore();
-
-    if (selectedPlatform.value === "windows") {
-        return (
-            <SelectButton items={windowsBinaryTypes} selectedItem={musicBinaryTypeWindows}
-                          setSelectedItem={setMusicBinaryTypeWindows}/>
-        );
+function SelectDownloadOption() {
+    const {selectedPlatform, musicDownloadOptions, setMusicDownloadOptions} = useStore();
+    switch (selectedPlatform.value) {
+        case "windows":
+        case "macos":
+        case "linux":
+        case "android":
+            return (
+                <SelectButton items={downloadOptions[selectedPlatform.value]} selectedItem={musicDownloadOptions[selectedPlatform.value]} setSelectedItem={(index) => {
+                    setMusicDownloadOptions({
+                        ...musicDownloadOptions,
+                        [selectedPlatform.value]: downloadOptions[selectedPlatform.value][index]
+                    });
+                }}/>
+            );
+        default:
+            return null;
     }
-    if (selectedPlatform.value === "linux") {
-        return (
-            <SelectButton items={linuxBinaryTypes} selectedItem={musicBinaryTypeLinux}
-                          setSelectedItem={setMusicBinaryTypeLinux}/>
-        );
-    } else {
-        return null;
-    }
-
 }
 
 export default function MusicPage() {
 
-    const [t] = useTranslation();
+    const [t, i18n] = useTranslation();
     const location = useLocation();
 
     useEffect(() => {
         document.title = "Amphi Music";
     }, [t, location]);
-    const {selectedPlatform, setSelectedPlatform, musicBinaryTypeWindows, musicBinaryTypeLinux} = useStore();
+    const {selectedPlatform, setSelectedPlatform, musicDownloadOptions} = useStore();
     let preview: string = "/images/music-preview-android-windows.webp";
     switch (selectedPlatform.value) {
         case "macos":
@@ -86,10 +95,6 @@ export default function MusicPage() {
             preview = "/images/music-preview-linux.webp";
             break;
     }
-    const bottomRef = useRef<HTMLDivElement>(null);
-    const scrollToBottom = () => {
-        bottomRef.current?.scrollIntoView({behavior: 'smooth'});
-    };
 
     return (
         <AppPage>
@@ -105,67 +110,28 @@ export default function MusicPage() {
                 <DownloadFieldContainer>
 
                     <SelectField>
-                        <SelectButton items={platforms} selectedItem={selectedPlatform}
-                                      setSelectedItem={setSelectedPlatform}/>
+                        <SelectButton items={platforms} selectedItem={selectedPlatform} setSelectedItem={(index) => {
+                            setSelectedPlatform(platforms[index]);
+                        }}/>
 
-                        <SelectPlatformButtonForMusic/>
+                        <SelectDownloadOption/>
 
                     </SelectField>
 
-                    <DownloadButton onClick={() => {
-                        switch (selectedPlatform.value) {
-                            case "windows":
-                                window.open(musicBinaryTypeWindows.value, "_blank");
-                                break;
-                            case "macos":
-                                window.open(MUSIC_DMG, "_blank");
-                                break;
-                            case "linux":
-                                window.open(musicBinaryTypeLinux.value, "_blank");
-                                break;
-                            case "android":
-                                window.open(MUSIC_PLAY_STORE, "_blank");
-                                break;
-                            case "ios":
-                                window.open(MUSIC_APPLE_APP_STORE, "_blank");
-                                break;
-                        }
-                    }}/>
-
-                    <PackageManagerButton onClick={() => {
-                        if (selectedPlatform.value === "android") {
-                            window.open(MUSIC_APK, "_blank");
-                        } else {
-                            scrollToBottom();
-                        }
+                    <DownloadButton downloadOption={musicDownloadOptions[selectedPlatform.value]} onClick={() => {
+                        window.open(musicDownloadOptions[selectedPlatform.value].value, "_blank");
                     }}/>
 
                     <LinkButton onClick={() => {
                         window.open("https://github.com/amphi2024/music/releases", "_blank");
-                    }}>{t("allReleases")}
+                    }}>{MUSIC_VERSION} / {new Date(2026, 0, 2).toLocaleDateString(i18n.language, {
+                        month: 'short',
+                        day: 'numeric',
+                        year: 'numeric'})}
                     </LinkButton>
 
                 </DownloadFieldContainer>
 
-            </AppPageSection>
-
-            <AppPageSection ref={bottomRef}>
-                <h1>
-                    {t("downloadOnPackageManager")}
-                </h1>
-                <PackageManagers>
-                    <PackageManagerSection platform={"Windows"} items={[
-                        {label: "Scoop", link: SCOOP},
-                    ]}/>
-                    <PackageManagerSection platform={"macOS"} items={[
-                        {label: "Homebrew", link: HOMEBREW_LINK},
-                    ]}/>
-                    <PackageManagerSection platform={"Linux"} items={[
-                        {label: "Flatpak", link: FLATPAK_LINK},
-                        {label: "Snap Store", link: MUSIC_SNAP},
-                        {label: "AUR", link: MUSIC_AUR},
-                    ]}/>
-                </PackageManagers>
             </AppPageSection>
 
         </AppPage>

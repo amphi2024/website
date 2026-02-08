@@ -1,8 +1,12 @@
 import styled from "styled-components";
-import {useStore} from "../store";
+import {type DownloadOption, useStore} from "../store";
 import {useTranslation} from "react-i18next";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGooglePlay, faApple } from '@fortawesome/free-brands-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faGooglePlay, faApple} from '@fortawesome/free-brands-svg-icons';
+import {faIceCream, faStore} from "@fortawesome/free-solid-svg-icons";
+import {HomebrewIcon} from "./icons/HomebrewIcon.tsx";
+import {SnapcraftIcon} from "./icons/SnapcraftIcon.tsx";
+import {ArchIcon} from "./icons/ArchIcon.tsx";
 
 const Button = styled.button`
     width: 276px;
@@ -18,7 +22,7 @@ const Button = styled.button`
     &:hover {
         background-color: var(--highlight-color-light);
     }
-    
+
 `;
 
 const AppStoreButton = styled.button`
@@ -30,13 +34,14 @@ const AppStoreButton = styled.button`
     font-size: 14px;
     margin-top: 8px;
     font-weight: 500;
-   
+
     //i {
     //    margin-left: 15px;
     //    margin-right: 18px;
     //    font-size: 20px;
     //}
     //
+
     span {
         font-size: 18px;
     }
@@ -68,44 +73,159 @@ const Column = styled.div`
     text-align: left;
 `;
 
-export function DownloadButton({onClick} : {onClick: () => void}) {
+export function DownloadButton({onClick, downloadOption = null}: { onClick: () => void , downloadOption?: DownloadOption | null}) {
     const [t] = useTranslation();
     const {selectedPlatform} = useStore();
 
-    if(selectedPlatform.value === "android") {
-        return (
-            <AppStoreButton onClick={onClick}>
-                <Row>
-                    <Column>
-                        <StyledFontAwesomeIcon icon={faGooglePlay} />
-                        {/*<i className="fa-brands fa-google-play"></i>*/}
-                    </Column>
-                    <Column>
-                        GET IT ON
-                        <span>
+    switch (selectedPlatform.value) {
+        case "windows":
+            switch (downloadOption?.type) {
+                case "scoop":
+                    return (
+                        <AppStoreButton onClick={onClick}>
+                            <Row>
+                                <Column>
+                                    <StyledFontAwesomeIcon icon={faIceCream}/>
+                                </Column>
+                                <Column>
+                                    GET IT ON
+                                    <span>
+                            Scoop
+                        </span>
+                                </Column>
+                            </Row>
+                        </AppStoreButton>
+                    );
+                default:
+                    return (
+                        <Button onClick={onClick}>
+                            {t("download")}
+                        </Button>
+                    );
+            }
+        case "macos":
+            switch (downloadOption?.type) {
+                case "homebrew":
+                    return (
+                        <AppStoreButton onClick={onClick}>
+                            <Row>
+                                <Column>
+                                    <HomebrewIcon />
+                                </Column>
+                                <Column>
+                                    Download on the
+                                    <span>
+                            Homebrew
+                        </span>
+                                </Column>
+                            </Row>
+                        </AppStoreButton>
+                    );
+                default:
+                    return (
+                        <Button onClick={onClick}>
+                            {t("download")}
+                        </Button>
+                    );
+            }
+        case "linux":
+            switch (downloadOption?.type) {
+                case "flatpak":
+                    return (
+                        <AppStoreButton onClick={onClick}>
+                            <Row>
+                                <Column>
+                                    <StyledFontAwesomeIcon icon={faStore}/>
+                                </Column>
+                                <Column>
+                                    GET IT ON
+                                    <span>
+                            Amphihub
+                        </span>
+                                </Column>
+                            </Row>
+                        </AppStoreButton>
+                    );
+                case "aur":
+                    return (
+                        <AppStoreButton onClick={onClick}>
+                            <Row>
+                                <Column>
+                                    <ArchIcon />
+                                </Column>
+                                <Column>
+                                    GET IT ON
+                                    <span>
+                            AUR
+                        </span>
+                                </Column>
+                            </Row>
+                        </AppStoreButton>
+                    );
+                case "snap":
+                    return (
+                        <AppStoreButton onClick={onClick}>
+                            <Row>
+                                <Column>
+                                    <SnapcraftIcon />
+                                </Column>
+                                <Column>
+                                    GET IT ON
+                                    <span>
+                            Snap Store
+                        </span>
+                                </Column>
+                            </Row>
+                        </AppStoreButton>
+                    );
+             default:
+                 return (
+                     <Button onClick={onClick}>
+                         {t("download")}
+                     </Button>
+                 );
+            }
+        case "android":
+            switch (downloadOption?.type) {
+                case "play_store":
+                    return (
+                        <AppStoreButton onClick={onClick}>
+                            <Row>
+                                <Column>
+                                    <StyledFontAwesomeIcon icon={faGooglePlay}/>
+                                </Column>
+                                <Column>
+                                    GET IT ON
+                                    <span>
                             Google Play
                         </span>
-                    </Column>
-                </Row>
-            </AppStoreButton>
-        );
-    }
-    if(selectedPlatform.value === "ios") {
-        return (
-            <AppStoreButton onClick={onClick}>
-                <Row>
-                    <Column>
-                        <StyledFontAwesomeIcon icon={faApple} style={{fontSize: "25px"}}></StyledFontAwesomeIcon>
-                    </Column>
-                    <Column>
-                        Download on the
-                        <span>
+                                </Column>
+                            </Row>
+                        </AppStoreButton>
+                    );
+                default:
+                    return (
+                        <Button onClick={onClick}>
+                            {t("download")}
+                        </Button>
+                    );
+            }
+        case "ios":
+            return (
+                <AppStoreButton onClick={onClick}>
+                    <Row>
+                        <Column>
+                            <StyledFontAwesomeIcon icon={faApple} style={{fontSize: "25px"}}></StyledFontAwesomeIcon>
+                        </Column>
+                        <Column>
+                            Download on the
+                            <span>
                             App Store
                         </span>
-                    </Column>
-                </Row>
-            </AppStoreButton>
-        );
+                        </Column>
+                    </Row>
+                </AppStoreButton>
+            );
     }
     return (
         <Button onClick={onClick}>
