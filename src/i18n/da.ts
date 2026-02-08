@@ -65,7 +65,7 @@ const data = {
         musicPageSubtitle: "Nyd dine favoritter i højeste kvalitet — altid.",
         serverPageTitle: "Din anden hjerne, dit digitale hjem",
         serverPageSubtitle: "Synkroniser alle dine noter, musik, fotos og filer problemfrit",
-        nextSteps: "Næste skridt",
+        
         photosPageTitle: "Hvor dine minder lever",
         photosPageSubtitle: "Fang og genoplev dine yndlingsøjeblikke med lethed",
         homepage: "Hjemmeside"

@@ -63,7 +63,7 @@ const data = {
         musicPageSubtitle: "Užijte si své oblíbené skladby v nejlepší kvalitě — kdykoliv.",
         serverPageTitle: "Váš druhý mozek, váš digitální domov",
         serverPageSubtitle: "Synchronizujte všechny své poznámky, hudbu, fotky a soubory hladce",
-        nextSteps: "Další kroky",
+        
         photosPageTitle: "Kde žijí vaše vzpomínky",
         photosPageSubtitle: "Snadno zachyťte a znovu prožijte své oblíbené okamžiky",
         homepage: "Domovská stránka"

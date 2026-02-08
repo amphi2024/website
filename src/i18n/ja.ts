@@ -66,7 +66,7 @@ const data = {
         musicPageSubtitle: "お気に入りの音楽を最高品質で、どこでも楽しめます。",
         serverPageTitle: "あなたの第二の脳、あなたのデジタルホーム",
         serverPageSubtitle: "ノート、音楽、写真、ファイルをシームレスに同期します。",
-        nextSteps: "次のステップ",
+        
         photosPageTitle: "思い出が生きる場所",
         photosPageSubtitle: "お気に入りの瞬間を簡単にキャプチャして振り返りましょう。",
         homepage: "ホームページ",

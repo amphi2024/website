@@ -66,7 +66,7 @@ const data = {
         musicPageSubtitle: "Genießen Sie Ihre Lieblingsmusik in bester Qualität — jederzeit.",
         serverPageTitle: "Dein zweites Gehirn, dein digitales Zuhause",
         serverPageSubtitle: "Synchronisiere alle deine Notizen, Musik, Fotos und Dateien nahtlos",
-        nextSteps: "Nächste Schritte",
+        
         photosPageTitle: "Wo deine Erinnerungen leben",
         photosPageSubtitle: "Halte deine Lieblingsmomente fest und erlebe sie mit Leichtigkeit erneut",
         homepage: "Startseite",

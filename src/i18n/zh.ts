@@ -66,7 +66,7 @@ const data = {
         musicPageSubtitle: "以最佳品质聆听您喜欢的音乐。",
         serverPageTitle: "你的第二大脑，你的数字之家",
         serverPageSubtitle: "无缝同步所有笔记、音乐、照片和文件。",
-        nextSteps: "下一步",
+        
         photosPageTitle: "你的回忆驻留之地",
         photosPageSubtitle: "轻松捕捉并重温你最喜欢的瞬间。",
         homepage: "主页",

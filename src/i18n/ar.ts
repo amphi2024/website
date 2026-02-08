@@ -64,7 +64,7 @@ const data = {
         musicPageSubtitle: "استمتع بموسيقاك المفضلة بأعلى جودة، في أي وقت.",
         serverPageTitle: "عقلك الثاني، منزلك الرقمي",
         serverPageSubtitle: "قم بمزامنة جميع ملاحظاتك، وموسيقاك، وصورك، وملفاتك بسلاسة",
-        nextSteps: "الخطوات التالية",
+        
         photosPageTitle: "حيث تعيش ذكرياتك",
         photosPageSubtitle: "التقط لحظاتك المفضلة وأعد عيشها بسهولة",
         homepage: "الصفحة الرئيسية"
