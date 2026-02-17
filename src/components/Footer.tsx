@@ -2,7 +2,7 @@ import {Link} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 import styled from "styled-components";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faGithub, faXTwitter, faYoutube} from "@fortawesome/free-brands-svg-icons";
+import {faGithub, faMastodon, faXTwitter, faYoutube} from "@fortawesome/free-brands-svg-icons";
 
 const AppFooter = styled.footer`
         text-align: center;
@@ -63,6 +63,11 @@ function Footer() {
                     window.open("https://x.com/amphi2024", "_blank");
                 }}>
                     <FontAwesomeIcon icon={faXTwitter}/>
+                </FooterButton>
+                <FooterButton onClick={() => {
+                    window.open("https://mastodon.social/@amphi2024", "_blank");
+                }}>
+                    <FontAwesomeIcon icon={faMastodon}/>
                 </FooterButton>
                 <FooterButton onClick={() => {
                     window.open("https://youtube.com/@amphi2024", "_blank");
