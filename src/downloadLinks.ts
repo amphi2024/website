@@ -1,5 +1,5 @@
 export const NOTES_VERSION = "2.1.0";
-export const MUSIC_VERSION = "2.0.0";
+export const MUSIC_VERSION = "2.1.0";
 export const PHOTOS_VERSION = "2.0.0";
 export const CLOUD_VERSION = "1.0.0";
 
