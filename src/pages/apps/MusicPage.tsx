@@ -124,7 +124,7 @@ export default function MusicPage() {
 
                     <LinkButton onClick={() => {
                         window.open("https://github.com/amphi2024/music/releases", "_blank");
-                    }}>{MUSIC_VERSION} / {new Date(2026, 0, 2).toLocaleDateString(i18n.language, {
+                    }}>{MUSIC_VERSION} / {new Date(2026, 1, 24).toLocaleDateString(i18n.language, {
                         month: 'short',
                         day: 'numeric',
                         year: 'numeric'})}
