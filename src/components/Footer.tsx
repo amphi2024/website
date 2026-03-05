@@ -62,7 +62,7 @@ function Footer() {
                 <FooterButton href={"https://x.com/amphi2024"} target={"_blank"}>
                     <FontAwesomeIcon icon={faXTwitter}/>
                 </FooterButton>
-                <FooterButton rel={"me"} href={"https://mastodon.social/@amphi2024"} target={"_blank"}>
+                <FooterButton rel={"me"} title={"Mastodon"} href={"https://mastodon.social/@amphi2024"} target={"_blank"}>
                     <FontAwesomeIcon icon={faMastodon}/>
                 </FooterButton>
                 <FooterButton href={"https://youtube.com/@amphi2024"} target={"_blank"}>
