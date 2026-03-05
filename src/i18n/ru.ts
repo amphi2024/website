@@ -1,75 +1,97 @@
 const data = {
-    translation: {
-        appsPageTitle: "Amphi Apps - Один сервер, синхронизируйте все",
-        gamesPageTitle: "Amphi Games",
-        donatePageTitle: "Пожертвовать для Amphi",
+    common: {
         apps: "Программы",
         games: "Игры",
-        donate: "Пожертвовать",
+        pricing: "Pricing",
         windows: "Windows",
         mac: "Mac",
         linux: "Linux",
         android: "Android",
         ios: "IOS",
-        appsPageHeader: "Один сервер, синхронизируйте все",
-        servers: "Серверы",
-        downloadServer: "Скачать сервер",
+        homepage: "Главная страница",
+        improveTranslations: "Improve Translations",
         privacyPolicy: "Политика конфиденциальности",
         termsAndCondition: "Условия и положения",
-        github: "Github",
-        appStores: "Магазины приложений",
-        binaries: "Бинарные файлы",
-        packageManagers: "Менеджеры пакетов",
         allReleases: "Все выпуски",
         sourceCode: "Исходный код",
-        notesAppName: "Заметки",
-        notesAppSubtitle: "Минималистичный дизайн, максимальная функциональность",
-        musicAppName: "Музыка",
-        cubeTimeAppName: "CubeTime",
-        cloudAppName: "Облако",
-        photosAppName: "Фотографии",
         inPlanning: "В разработке",
-        donationPageHeader: "Вам понравились наши приложения и игры?",
-        donationMessage: "Ваша поддержка имеет для нас большое значение и помогает нам продолжать выпускать обновления и улучшать качество. Благодаря вашим пожертвованиям мы можем уделить больше времени разработке, что напрямую улучшает качество и полноту наших приложений и игр. Кроме того, ваши щедрые взносы помогают покрывать расходы на хостинг сайта и плату за регистрацию в магазинах приложений. Большое спасибо за вашу поддержку!",
         latestVersion: "Последняя",
-        homePageSection1Title: "Все ваши данные под вашим контролем",
-        homePageSection1Subtitle: "Запустите собственный сервер и синхронизируйте свои данные.",
-        homePageSection2Title: "Простая настройка",
-        homePageSection2Subtitle: "Настройка сервера больше не только для разработчиков.",
-        homePageSection2Card1Title: "Без зависимостей",
-        homePageSection2Card1Subtitle: "Не нужно устанавливать дополнительные пакеты.",
-        homePageSection2Card2Title: "Встроенная база данных",
-        homePageSection2Card2Subtitle: "Не требуется настройка внешней базы данных.",
-        homePageSection2Card3Title: "Кроссплатформенность",
-        homePageSection2Card3Subtitle: "Сервер работает на Windows, Mac и Linux.",
-        homePageSection2Card4Title: "Простая конфигурация",
-        homePageSection2Card4Subtitle: "Настройка через простой текстовый файл.",
-        homePageSection2Card5Title: "Чистота",
-        homePageSection2Card5Subtitle: "Сервер не оставляет лишних файлов вне своей директории.",
-        homePageSection2Card6Title: "Быстрый старт",
-        homePageSection2Card6Subtitle: "Просто скачайте и запустите сервер.",
-        homePageSection3Title: "Красиво на любой платформе",
-        homePageSection3Subtitle: "Минималистичный и удобный дизайн с эмоциональной составляющей.",
-        homePageSection4Title: "Один сервер — синхронизация всего",
-        homePageSection4Subtitle: "Легко синхронизируйте все данные с одним простым сервером.",
+        download: "Скачать",
+        notes: "Заметки",
+        music: "Музыка",
+        photos: "Фотографии",
+        cloud: "Облако",
+        server: "Server"
+    },
+    home: {
+        title: "Amphi Apps - Один сервер, синхронизируйте все",
+        hero: {
+            title: "Все ваши данные под вашим контролем",
+            subtitle: "Запустите собственный сервер и синхронизируйте свои данные."
+        },
+        setup: {
+            title: "Простая настройка",
+            subtitle: "Настройка сервера больше не только для разработчиков.",
+            features: {
+                noDeps: {
+                    title: "Без зависимостей",
+                    description: "Не нужно устанавливать дополнительные пакеты."
+                },
+                builtInDb: {
+                    title: "Встроенная база данных",
+                    description: "Не требуется настройка внешней базы данных."
+                },
+                crossPlatform: {
+                    title: "Кроссплатформенность",
+                    description: "Сервер работает на Windows, Mac и Linux."
+                },
+                simpleConfig: {
+                    title: "Простая конфигурация",
+                    description: "Настройка через простой текстовый файл."
+                },
+                clean: {
+                    title: "Чистота",
+                    description: "Сервер не оставляет лишних файлов вне своей директории."
+                },
+                quickStart: {
+                    title: "Быстрый старт",
+                    description: "Просто скачайте и запустите сервер."
+                }
+            }
+        },
+        design: {
+            title: "Красиво на любой платформе",
+            subtitle: "Минималистичный и удобный дизайн с эмоциональной составляющей."
+        },
+        sync: {
+            title: "Один сервер — синхронизация всего",
+            subtitle: "Легко синхронизируйте все данные с одним простым сервером."
+        },
         setupServer: "Настроить сервер",
         downloadApps: "Скачать приложения",
-        download: "Скачать",
-        downloadOnPackageManager: "Скачать через менеджер пакетов",
-        downloadAPK: "Скачать APK",
-        downloadIPA: "Скачать IPA",
         startNow: "Начать сейчас",
-        notesPageTitle: "Где живут все ваши мысли",
-        notesPageSubtitle: "Свободно пишите свои истории в любое время и в любом месте.",
-        musicPageTitle: "Ваша любимая музыкальная библиотека",
-        musicPageSubtitle: "Слушайте свои любимые треки в лучшем качестве.",
-        serverPageTitle: "Твой второй мозг, твой цифровой дом",
-        serverPageSubtitle: "Синхронизируй все заметки, музыку, фотографии и файлы без проблем.",
-        
-        photosPageTitle: "Где живут твои воспоминания",
-        photosPageSubtitle: "Легко сохраняй и переживай заново любимые моменты.",
-        homepage: "Главная страница",
-        improveTranslations: "Улучшить переводы"
+    },
+    notes: {
+        title: "Где живут все ваши мысли",
+        subtitle: "Свободно пишите свои истории в любое время и в любом месте.",
+    },
+    music: {
+        title: "Ваша любимая музыкальная библиотека",
+        subtitle: "Слушайте свои любимые треки в лучшем качестве.",
+    },
+    photos: {
+        title: "Где живут твои воспоминания",
+        subtitle: "Легко сохраняй и переживай заново любимые моменты.",
+    },
+    cloud: {
+        title: "My Digital Treasure Vault",
+        subtitle: "Keep your important files safe.",
+    },
+    server: {
+        title: "Твой второй мозг, твой цифровой дом",
+        subtitle: "Синхронизируй все заметки, музыку, фотографии и файлы без проблем.",
+        setupGuide: "Setup Guide",
+        youtubeTutorial: "YouTube Tutorial",
     }
 };
 

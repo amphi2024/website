@@ -90,12 +90,12 @@ export default function PhotosPage() {
         <AppPage>
             <AppPageSection>
                 <h1>
-                    {t("photosPageTitle")}
+                    {t("photos:title")}
                 </h1>
                 <h2>
-                    {t("photosPageSubtitle")}
+                    {t("photos:subtitle")}
                 </h2>
-                <AppPreview src={preview} alt={"photosAppPreview"} loading="eager"/>
+                <AppPreview src={preview} alt={"Preview"} loading="eager"/>
 
                 <DownloadFieldContainer>
 

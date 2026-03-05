@@ -1,68 +1,92 @@
 const data = {
-    translation: {
-        appsPageTitle: "Amphi Apps - ایک سرور، سب کچھ ہم آہنگ کریں",
-        gamesPageTitle: "Amphi Games",
-        donatePageTitle: "Amphi کے لیے عطیہ کریں",
+    common: {
         apps: "ایپس",
         games: "گیمز",
-        donate: "عطیہ کریں",
+        pricing: "Pricing",
         windows: "Windows",
         mac: "Mac",
         linux: "Linux",
         android: "Android",
         ios: "IOS",
-        appsPageHeader: "ایک سرور، سب کچھ ہم آہنگ کریں",
-        servers: "سرورز",
-        downloadServer: "سرور ڈاؤن لوڈ کریں",
+        improveTranslations: "Improve Translations",
         privacyPolicy: "پرائیویسی پالیسی",
         termsAndCondition: "شرائط و ضوابط",
-        github: "Github",
-        appStores: "ایپ اسٹورز",
-        binaries: "بائنری فائلز",
-        packageManagers: "پیکج مینیجرز",
         allReleases: "تمام ورژنز",
         sourceCode: "سورس کوڈ",
-        notesAppName: "نوٹس",
-        notesAppSubtitle: "سادہ ڈیزائن، زیادہ سے زیادہ فعالیت",
-        musicAppName: "موسیقی",
-        cubeTimeAppName: "CubeTime",
-        cloudAppName: "کلاؤڈ",
-        photosAppName: "تصاویر",
         inPlanning: "منصوبہ بندی میں",
-        donationPageHeader: "کیا آپ کو ہمارے ایپس اور گیمز پسند آئیں؟",
-        donationMessage: "آپ کی حمایت ہمارے لیے بہت معنی رکھتی ہے اور ہمیں اپڈیٹس فراہم کرنے اور معیار کو بہتر بنانے میں مدد دیتی ہے۔ آپ کے عطیات سے ہم ترقی پر زیادہ وقت صرف کر سکتے ہیں، جو ہماری ایپس اور گیمز کے معیار اور تکمیل کو براہ راست بہتر کرتا ہے۔ مزید یہ کہ آپ کی فراخدلی سے دی گئی عطیات ویب ہوسٹنگ اور ایپ اسٹور کی رجسٹریشن فیس کو پورا کرنے میں مدد کرتی ہیں۔ آپ کی حمایت کا بہت شکریہ!",
         latestVersion: "آخری",
-        homePageSection1Title: "آپ کا سارا ڈیٹا آپ کے ہاتھ میں",
-        homePageSection1Subtitle: "اپنا سرور چلائیں اور اپنے ڈیٹا کو ہم آہنگ کریں۔",
-        homePageSection2Title: "آسان سیٹ اپ",
-        homePageSection2Subtitle: "سرور سیٹ اپ اب صرف ڈویلپرز کے لیے نہیں۔",
-        homePageSection2Card1Title: "کوئی انحصار نہیں",
-        homePageSection2Card1Subtitle: "سرور سیٹ اپ کے لیے اضافی پیکجز انسٹال کرنے کی ضرورت نہیں۔",
-        homePageSection2Card2Title: "ان بلٹ ڈیٹا بیس",
-        homePageSection2Card2Subtitle: "سرور چلانے کے لیے ڈیٹا بیس کی الگ سیٹنگ کی ضرورت نہیں۔",
-        homePageSection2Card3Title: "کراس پلیٹ فارم",
-        homePageSection2Card3Subtitle: "آپ سرور کو Windows، Mac یا Linux پر چلا سکتے ہیں۔",
-        homePageSection2Card4Title: "سادہ ساخت",
-        homePageSection2Card4Subtitle: "سب کچھ ایک سادہ ٹیکسٹ فائل کے ذریعے ہوتا ہے۔",
-        homePageSection2Card5Title: "صاف ستھرا",
-        homePageSection2Card5Subtitle: "سرور اپنی ڈائریکٹری کے باہر غیر ضروری فائلیں نہیں چھوڑتا۔",
-        homePageSection2Card6Title: "تیز آغاز",
-        homePageSection2Card6Subtitle: "بس ڈاؤن لوڈ کریں اور سرور چلائیں۔",
-        homePageSection3Title: "ہر پلیٹ فارم پر خوبصورت",
-        homePageSection3Subtitle: "سادہ اور عملی ڈیزائن کے ساتھ جذباتی تجربہ۔",
-        homePageSection4Title: "ایک سرور، سب کچھ سنکرونائز کریں",
-        homePageSection4Subtitle: "اپنے تمام ڈیٹا کو ایک آسان سرور کے ذریعے آسانی سے ہم آہنگ کریں۔",
+        download: "ڈاؤن لوڈ کریں",
+        notes: "نوٹس",
+        music: "موسیقی",
+        photos: "تصاویر",
+        cloud: "کلاؤڈ",
+        server: "Server"
+    },
+    home: {
+        title: "Amphi Apps - ایک سرور، سب کچھ ہم آہنگ کریں",
+        hero: {
+            title: "آپ کا سارا ڈیٹا آپ کے ہاتھ میں",
+            subtitle: "اپنا سرور چلائیں اور اپنے ڈیٹا کو ہم آہنگ کریں۔"
+        },
+        setup: {
+            title: "آسان سیٹ اپ",
+            subtitle: "سرور سیٹ اپ اب صرف ڈویلپرز کے لیے نہیں۔",
+            features: {
+                noDeps: {
+                    title: "کوئی انحصار نہیں",
+                    description: "سرور سیٹ اپ کے لیے اضافی پیکجز انسٹال کرنے کی ضرورت نہیں۔"
+                },
+                builtInDb: {
+                    title: "ان بلٹ ڈیٹا بیس",
+                    description: "سرور چلانے کے لیے ڈیٹا بیس کی الگ سیٹنگ کی ضرورت نہیں۔"
+                },
+                crossPlatform: {
+                    title: "کراس پلیٹ فارم",
+                    description: "آپ سرور کو Windows، Mac یا Linux پر چلا سکتے ہیں۔"
+                },
+                simpleConfig: {
+                    title: "سادہ ساخت",
+                    description: "سب کچھ ایک سادہ ٹیکسٹ فائل کے ذریعے ہوتا ہے۔"
+                },
+                clean: {
+                    title: "صاف ستھرا",
+                    description: "سرور اپنی ڈائریکٹری کے باہر غیر ضروری فائلیں نہیں چھوڑتا۔"
+                },
+                quickStart: {
+                    title: "تیز آغاز",
+                    description: "بس ڈاؤن لوڈ کریں اور سرور چلائیں۔"
+                }
+            }
+        },
+        design: {
+            title: "ہر پلیٹ فارم پر خوبصورت",
+            subtitle: "سادہ اور عملی ڈیزائن کے ساتھ جذباتی تجربہ۔"
+        },
+        sync: {
+            title: "ایک سرور، سب کچھ سنکرونائز کریں",
+            subtitle: "اپنے تمام ڈیٹا کو ایک آسان سرور کے ذریعے آسانی سے ہم آہنگ کریں۔"
+        },
         setupServer: "سرور سیٹ اپ کریں",
         downloadApps: "ایپس ڈاؤن لوڈ کریں",
-        download: "ڈاؤن لوڈ کریں",
-        downloadOnPackageManager: "پیکج مینیجر سے ڈاؤن لوڈ کریں",
-        downloadAPK: "APK ڈاؤن لوڈ کریں",
-        downloadIPA: "IPA ڈاؤن لوڈ کریں",
         startNow: "ابھی شروع کریں",
-        notesPageTitle: "جہاں آپ کے تمام خیالات رہتے ہیں",
-        notesPageSubtitle: "اپنی کہانیاں آزادانہ طور پر کہیں بھی اور کبھی بھی لکھیں۔",
-        musicPageTitle: "آپ کی پسندیدہ میوزک لائبریری",
-        musicPageSubtitle: "اپنے پسندیدہ گانے بہترین معیار میں سنیں۔"
+    },
+    notes: {
+        title: "جہاں آپ کے تمام خیالات رہتے ہیں",
+        subtitle: "اپنی کہانیاں آزادانہ طور پر کہیں بھی اور کبھی بھی لکھیں۔",
+    },
+    music: {
+        title: "آپ کی پسندیدہ میوزک لائبریری",
+        subtitle: "اپنے پسندیدہ گانے بہترین معیار میں سنیں۔",
+    },
+    photos: {
+    },
+    cloud: {
+        title: "My Digital Treasure Vault",
+        subtitle: "Keep your important files safe.",
+    },
+    server: {
+        setupGuide: "Setup Guide",
+        youtubeTutorial: "YouTube Tutorial",
     }
 };
 

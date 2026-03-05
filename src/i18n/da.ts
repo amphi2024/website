@@ -1,74 +1,97 @@
 const data = {
-    translation: {
-        appsPageTitle: "Amphi Apps - Én server, synkroniser alt",
-        gamesPageTitle: "Amphi Games",
-        donatePageTitle: "Doner til Amphi",
+    common: {
         apps: "Apps",
         games: "Spil",
-        donate: "Doner",
+        pricing: "Pricing",
         windows: "Windows",
         mac: "Mac",
         linux: "Linux",
         android: "Android",
         ios: "IOS",
-        appsPageHeader: "Én server, synkroniser alt",
-        servers: "Servere",
-        downloadServer: "Download server",
+        homepage: "Hjemmeside",
+        improveTranslations: "Improve Translations",
         privacyPolicy: "Privatlivspolitik",
         termsAndCondition: "Betingelser",
-        github: "Github",
-        appStores: "App Stores",
-        binaries: "Binære filer",
-        packageManagers: "Pakkestyring",
         allReleases: "Alle udgivelser",
         sourceCode: "Kildekode",
-        notesAppName: "Noter",
-        notesAppSubtitle: "Minimalistisk design, maksimal funktionalitet",
-        musicAppName: "Musik",
-        cubeTimeAppName: "CubeTime",
-        cloudAppName: "Cloud",
-        photosAppName: "Fotos",
         inPlanning: "Under planlægning",
-        donationPageHeader: "Har du nydt vores apps og spil?",
-        donationMessage: "Din støtte betyder meget for os og hjælper os med at fortsætte med at levere opdateringer og forbedre kvaliteten. Med dine donationer kan vi afsætte mere tid til udvikling, hvilket direkte forbedrer vores apps og spil. Desuden hjælper dine generøse bidrag med at dække webstedshosting og app store-registreringsgebyrer. Mange tak for din støtte!",
         latestVersion: "Nyeste",
-        homePageSection1Title: "Al din data i dine hænder",
-        homePageSection1Subtitle: "Kør din egen server og synkroniser dine data frit.",
-        homePageSection2Title: "Nem opsætning",
-        homePageSection2Subtitle: "Opsætning af server er ikke kun for udviklere længere.",
-        homePageSection2Card1Title: "Ingen afhængigheder",
-        homePageSection2Card1Subtitle: "Ingen ekstra pakker behøves for at komme i gang.",
-        homePageSection2Card2Title: "Indbygget database",
-        homePageSection2Card2Subtitle: "Ingen behov for at konfigurere en ekstern database.",
-        homePageSection2Card3Title: "Tværplatform",
-        homePageSection2Card3Subtitle: "Serveren kan nemt køres på Windows, macOS eller Linux.",
-        homePageSection2Card4Title: "Enkel konfiguration",
-        homePageSection2Card4Subtitle: "Bare rediger én tekstfil for at konfigurere alt.",
-        homePageSection2Card5Title: "Ren",
-        homePageSection2Card5Subtitle: "Serveren efterlader ingen unødvendige filer uden for dens mappe.",
-        homePageSection2Card6Title: "Hurtig start",
-        homePageSection2Card6Subtitle: "Bare download og kør — så nemt er det.",
-        homePageSection3Title: "Smukt på alle platforme",
-        homePageSection3Subtitle: "Oplev et minimalistisk og praktisk design med følelsesmæssig appel på alle platforme.",
-        homePageSection4Title: "En server, synkronisér alt",
-        homePageSection4Subtitle: "Synkronisér alle dine data let med én enkel server.",
+        download: "Download",
+        notes: "Noter",
+        music: "Musik",
+        photos: "Fotos",
+        cloud: "Cloud",
+        server: "Server"
+    },
+    home: {
+        title: "Amphi Apps - Én server, synkroniser alt",
+        hero: {
+            title: "Al din data i dine hænder",
+            subtitle: "Kør din egen server og synkroniser dine data frit."
+        },
+        setup: {
+            title: "Nem opsætning",
+            subtitle: "Opsætning af server er ikke kun for udviklere længere.",
+            features: {
+                noDeps: {
+                    title: "Ingen afhængigheder",
+                    description: "Ingen ekstra pakker behøves for at komme i gang."
+                },
+                builtInDb: {
+                    title: "Indbygget database",
+                    description: "Ingen behov for at konfigurere en ekstern database."
+                },
+                crossPlatform: {
+                    title: "Tværplatform",
+                    description: "Serveren kan nemt køres på Windows, macOS eller Linux."
+                },
+                simpleConfig: {
+                    title: "Enkel konfiguration",
+                    description: "Bare rediger én tekstfil for at konfigurere alt."
+                },
+                clean: {
+                    title: "Ren",
+                    description: "Serveren efterlader ingen unødvendige filer uden for dens mappe."
+                },
+                quickStart: {
+                    title: "Hurtig start",
+                    description: "Bare download og kør — så nemt er det."
+                }
+            }
+        },
+        design: {
+            title: "Smukt på alle platforme",
+            subtitle: "Oplev et minimalistisk og praktisk design med følelsesmæssig appel på alle platforme."
+        },
+        sync: {
+            title: "En server, synkronisér alt",
+            subtitle: "Synkronisér alle dine data let med én enkel server."
+        },
         setupServer: "Opsæt server",
         downloadApps: "Download apps",
-        download: "Download",
-        downloadOnPackageManager: "Download via Pakkehåndtering",
-        downloadAPK: "Download APK",
-        downloadIPA: "Download IPA",
         startNow: "Start nu",
-        notesPageTitle: "Hvor alle dine tanker bor",
-        notesPageSubtitle: "Skriv dine historier frit, når som helst, hvor som helst.",
-        musicPageTitle: "Din personlige musiksamling",
-        musicPageSubtitle: "Nyd dine favoritter i højeste kvalitet — altid.",
-        serverPageTitle: "Din anden hjerne, dit digitale hjem",
-        serverPageSubtitle: "Synkroniser alle dine noter, musik, fotos og filer problemfrit",
-        
-        photosPageTitle: "Hvor dine minder lever",
-        photosPageSubtitle: "Fang og genoplev dine yndlingsøjeblikke med lethed",
-        homepage: "Hjemmeside"
+    },
+    notes: {
+        title: "Hvor alle dine tanker bor",
+        subtitle: "Skriv dine historier frit, når som helst, hvor som helst.",
+    },
+    music: {
+        title: "Din personlige musiksamling",
+        subtitle: "Nyd dine favoritter i højeste kvalitet — altid.",
+    },
+    photos: {
+        title: "Hvor dine minder lever",
+        subtitle: "Fang og genoplev dine yndlingsøjeblikke med lethed",
+    },
+    cloud: {
+        title: "My Digital Treasure Vault",
+        subtitle: "Keep your important files safe.",
+    },
+    server: {
+        title: "Din anden hjerne, dit digitale hjem",
+        subtitle: "Synkroniser alle dine noter, musik, fotos og filer problemfrit",
+        setupGuide: "Setup Guide",
+        youtubeTutorial: "YouTube Tutorial",
     }
 };
 

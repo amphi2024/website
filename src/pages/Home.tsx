@@ -94,7 +94,7 @@ const AppButton = styled.img`
 
 
 const HomePageSection = ({ children, style }: {children: ReactNode, style?: CSSProperties}) => {
-    const [t] = useTranslation();
+    const {t} = useTranslation("home");
     const location = useLocation();
     const ref = useRef(null);
     const [revealed, setRevealed] = useState(false);
@@ -145,10 +145,11 @@ const HomePageImage = styled.img`
 `
 
 function Home() {
-    const [t] = useTranslation();
+    const {t} = useTranslation("home");
+
     const location = useLocation();
     useEffect(() => {
-        document.title = t('appsPageTitle');
+        document.title = t('title');
     }, [location, t]);
 
     const bottomRef = useRef<HTMLDivElement>(null);
@@ -159,14 +160,13 @@ function Home() {
 
     return (
         <HomePage>
-
             <HomePageSection style={{height: "100vh"}}>
                 <h1 style={{paddingTop: "var(--header-height)"}}>
-                    {t("homePageSection1Title")}
+                    {t("hero.title")}
                 </h1>
 
                 <p>
-                    {t("homePageSection1Subtitle")}
+                    {t("hero.subtitle")}
                 </p>
 
                 <MainPreview src={"/images/homepage-banner.png"} alt="hompage banner" />
@@ -179,79 +179,78 @@ function Home() {
             </HomePageSection>
             <HomePageSection style={{backgroundColor: "var(--card-background-color)"}}>
                 <h2>
-                    {t("homePageSection2Title")}
+                    {t("setup.title")}
                 </h2>
 
                 <p>
-                    {t("homePageSection2Subtitle")}
+                    {t("setup.subtitle")}
                 </p>
 
                 <HomePageCardGrid>
                     <HomePageCard>
                         <h3>
-                            {t("homePageSection2Card1Title")}
+                            {t("setup.features.noDeps.title")}
                         </h3>
                         <p>
-                            {t("homePageSection2Card1Subtitle")}
+                            {t("setup.features.noDeps.description")}
                         </p>
                     </HomePageCard>
 
                     <HomePageCard>
                         <h3>
-                            {t("homePageSection2Card2Title")}
+                            {t("setup.features.builtInDb.title")}
                         </h3>
                         <p>
-                            {t("homePageSection2Card2Subtitle")}
+                            {t("setup.features.builtInDb.description")}
                         </p>
                     </HomePageCard>
 
                     <HomePageCard>
                         <h3>
-                            {t("homePageSection2Card3Title")}
+                            {t("setup.features.crossPlatform.title")}
                         </h3>
                         <p>
-                            {t("homePageSection2Card3Subtitle")}
+                            {t("setup.features.crossPlatform.description")}
                         </p>
                     </HomePageCard>
 
                     <HomePageCard>
                         <h3>
-                            {t("homePageSection2Card4Title")}
+                            {t("setup.features.simpleConfig.title")}
                         </h3>
                         <p>
-                            {t("homePageSection2Card4Subtitle")}
+                            {t("setup.features.simpleConfig.description")}
                         </p>
                     </HomePageCard>
 
                     <HomePageCard>
                         <h3>
-                            {t("homePageSection2Card5Title")}
+                            {t("setup.features.clean.title")}
                         </h3>
                         <p>
-                            {t("homePageSection2Card5Subtitle")}
+                            {t("setup.features.clean.description")}
                         </p>
                     </HomePageCard>
 
                     <HomePageCard>
                         <h3>
-                            {t("homePageSection2Card6Title")}
+                            {t("setup.features.quickStart.title")}
                         </h3>
                         <p>
-                            {t("homePageSection2Card6Subtitle")}
+                            {t("setup.features.quickStart.description")}
                         </p>
                     </HomePageCard>
-
                 </HomePageCardGrid>
 
             </HomePageSection>
 
             <HomePageSection style={{height: "100vh"}}>
                 <h2>
-                    {t("homePageSection3Title")}
+                    {t("design.title")}
                 </h2>
 
                 <p>
-                    {t("homePageSection3Subtitle")}
+                    {t("design.subtitle")}
                 </p>
 
                 <HomePageImage src={"/images/homepage.webp"} alt="homepage banner" />
@@ -260,11 +259,11 @@ function Home() {
 
             <HomePageSection >
                 <h2 ref={bottomRef}>
-                    {t("homePageSection4Title")}
+                    {t("sync.title")}
                 </h2>
 
                 <p>
-                    {t("homePageSection4Subtitle")}
+                    {t("sync.subtitle")}
                 </p>
 
                 <Link to={"/server"}>

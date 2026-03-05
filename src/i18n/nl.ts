@@ -1,68 +1,94 @@
 const data = {
-    translation: {
-        appsPageTitle: "Amphi Apps - Eén server, synchroniseer alles",
-        gamesPageTitle: "Amphi Games",
-        donatePageTitle: "Doneer voor Amphi",
+    common: {
         apps: "Apps",
         games: "Spellen",
-        donate: "Doneren",
+        pricing: "Pricing",
         windows: "Windows",
         mac: "Mac",
         linux: "Linux",
         android: "Android",
         ios: "IOS",
-        appsPageHeader: "Eén server, synchroniseer alles",
-        servers: "ServerPage",
-        downloadServer: "Download Server",
+        improveTranslations: "Improve Translations",
         privacyPolicy: "Privacybeleid",
         termsAndCondition: "Voorwaarden",
-        github: "Github",
-        appStores: "App Stores",
-        binaries: "Binaries",
-        packageManagers: "Pakketbeheerders",
         allReleases: "Alle Releases",
         sourceCode: "Broncode",
-        notesAppName: "Notities",
-        notesAppSubtitle: "Minimalistisch ontwerp, maximale functionaliteit",
-        musicAppName: "Muziek",
-        cubeTimeAppName: "CubeTime",
-        cloudAppName: "Cloud",
-        photosAppName: "Foto's",
         inPlanning: "In planning",
-        donationPageHeader: "Heb je genoten van onze apps en games?",
-        donationMessage: "Je steun betekent veel voor ons en helpt ons om updates te blijven bieden en de kwaliteit te verbeteren. Met jouw donaties kunnen we meer tijd aan de ontwikkeling besteden, wat direct de kwaliteit en volledigheid van onze apps en games verbetert. Bovendien helpen je genereuze bijdragen de kosten voor website-hosting en app store registratiekosten te dekken. Heel erg bedankt voor je steun!",
         latestVersion: "Laatste",
-        homePageSection1Title: "Al je gegevens in eigen handen",
-        homePageSection1Subtitle: "Host je eigen server en synchroniseer je data.",
-        homePageSection2Title: "Eenvoudige installatie",
-        homePageSection2Subtitle: "Serverconfiguratie is niet langer alleen voor ontwikkelaars.",
-        homePageSection2Card1Title: "Geen afhankelijkheden",
-        homePageSection2Card1Subtitle: "Geen extra pakketten nodig om te beginnen.",
-        homePageSection2Card2Title: "Ingebouwde database",
-        homePageSection2Card2Subtitle: "Geen externe database nodig.",
-        homePageSection2Card3Title: "Platformonafhankelijk",
-        homePageSection2Card3Subtitle: "Je kunt de server gemakkelijk draaien op Windows, macOS of Linux.",
-        homePageSection2Card4Title: "Eenvoudige configuratie",
-        homePageSection2Card4Subtitle: "Bewerk gewoon één tekstbestand voor configuratie.",
-        homePageSection2Card5Title: "Schoon",
-        homePageSection2Card5Subtitle: "Laat geen onnodige bestanden achter buiten de servermap.",
-        homePageSection2Card6Title: "Snelle start",
-        homePageSection2Card6Subtitle: "Download en start — zo eenvoudig is het.",
-        homePageSection3Title: "Prachtig op elk platform",
-        homePageSection3Subtitle: "Ervaar een minimalistisch en functioneel ontwerp met emotionele impact op alle platforms.",
-        homePageSection4Title: "Eén server, alles synchroniseren",
-        homePageSection4Subtitle: "Synchroniseer al je data eenvoudig met één simpele server.",
+        download: "Download",
+        notes: "Notities",
+        music: "Muziek",
+        photos: "Foto's",
+        cloud: "Cloud",
+        server: "Server"
+    },
+    home: {
+        title: "Amphi Apps - Eén server, synchroniseer alles",
+        hero: {
+            title: "Al je gegevens in eigen handen",
+            subtitle: "Host je eigen server en synchroniseer je data."
+        },
+        setup: {
+            title: "Eenvoudige installatie",
+            subtitle: "Serverconfiguratie is niet langer alleen voor ontwikkelaars.",
+            features: {
+                noDeps: {
+                    title: "Geen afhankelijkheden",
+                    description: "Geen extra pakketten nodig om te beginnen."
+                },
+                builtInDb: {
+                    title: "Ingebouwde database",
+                    description: "Geen externe database nodig."
+                },
+                crossPlatform: {
+                    title: "Platformonafhankelijk",
+                    description: "Je kunt de server gemakkelijk draaien op Windows, macOS of Linux."
+                },
+                simpleConfig: {
+                    title: "Eenvoudige configuratie",
+                    description: "Bewerk gewoon één tekstbestand voor configuratie."
+                },
+                clean: {
+                    title: "Schoon",
+                    description: "Laat geen onnodige bestanden achter buiten de servermap."
+                },
+                quickStart: {
+                    title: "Snelle start",
+                    description: "Download en start — zo eenvoudig is het."
+                }
+            }
+        },
+        design: {
+            title: "Prachtig op elk platform",
+            subtitle: "Ervaar een minimalistisch en functioneel ontwerp met emotionele impact op alle platforms."
+        },
+        sync: {
+            title: "Eén server, alles synchroniseren",
+            subtitle: "Synchroniseer al je data eenvoudig met één simpele server."
+        },
         setupServer: "Server instellen",
         downloadApps: "Apps downloaden",
-        download: "Download",
-        downloadOnPackageManager: "Download via pakketbeheer",
-        downloadAPK: "APK downloaden",
-        downloadIPA: "IPA downloaden",
         startNow: "Begin nu",
-        notesPageTitle: "Waar al je gedachten wonen",
-        notesPageSubtitle: "Schrijf je verhalen vrij, altijd en overal.",
-        musicPageTitle: "Je persoonlijke muziekbibliotheek",
-        musicPageSubtitle: "Geniet van je favorieten in topkwaliteit — altijd."
+    },
+    notes: {
+        title: "Waar al je gedachten wonen",
+        subtitle: "Schrijf je verhalen vrij, altijd en overal.",
+    },
+    music: {
+        title: "Je persoonlijke muziekbibliotheek",
+        subtitle: "Geniet van je favorieten in topkwaliteit — altijd.",
+    },
+    photos: {
+
+    },
+    cloud: {
+        title: "My Digital Treasure Vault",
+        subtitle: "Keep your important files safe.",
+    },
+    server: {
+
+        setupGuide: "Setup Guide",
+        youtubeTutorial: "YouTube Tutorial",
     }
 };
 

@@ -1,68 +1,93 @@
 const data = {
-    translation: {
-        appsPageTitle: "Amphi Apps - En server, synkronisera allt",
-        gamesPageTitle: "Amphi Games",
-        donatePageTitle: "Donera till Amphi",
+    common: {
         apps: "Appar",
         games: "Spel",
-        donate: "Donera",
+        pricing: "Pricing",
         windows: "Windows",
         mac: "Mac",
         linux: "Linux",
         android: "Android",
         ios: "IOS",
-        appsPageHeader: "En server, synkronisera allt",
-        servers: "Servrar",
-        downloadServer: "Ladda ner server",
+        improveTranslations: "Improve Translations",
         privacyPolicy: "Sekretesspolicy",
         termsAndCondition: "Villkor",
-        github: "Github",
-        appStores: "Appbutiker",
-        binaries: "Binärer",
-        packageManagers: "Paketförvaltare",
         allReleases: "Alla versioner",
         sourceCode: "Källkod",
-        notesAppName: "Anteckningar",
-        notesAppSubtitle: "Minimal design, maximal funktionalitet",
-        musicAppName: "Musik",
-        cubeTimeAppName: "CubeTime",
-        cloudAppName: "Moln",
-        photosAppName: "Foton",
         inPlanning: "Under planering",
-        donationPageHeader: "Gillar du våra appar och spel?",
-        donationMessage: "Ditt stöd betyder mycket för oss och hjälper oss att fortsätta ge uppdateringar och förbättra kvaliteten. Med dina donationer kan vi ägna mer tid åt utveckling, vilket direkt förbättrar kvaliteten och fullständigheten av våra appar och spel. Dessutom hjälper dina generösa bidrag till att täcka kostnader för webbhotell och appbutiksregistreringsavgifter. Tack så mycket för ditt stöd!",
         latestVersion: "Senaste",
-        homePageSection1Title: "Alla dina data i dina händer",
-        homePageSection1Subtitle: "Kör din egen server och synkronisera dina data.",
-        homePageSection2Title: "Enkel installation",
-        homePageSection2Subtitle: "Serverinställning är inte längre bara för utvecklare.",
-        homePageSection2Card1Title: "Inga beroenden",
-        homePageSection2Card1Subtitle: "Behöver inte installera extra paket för att konfigurera servern.",
-        homePageSection2Card2Title: "Inbyggd databas",
-        homePageSection2Card2Subtitle: "Ingen extern databas behöver konfigureras.",
-        homePageSection2Card3Title: "Plattformsoberoende",
-        homePageSection2Card3Subtitle: "Servern kan köras på Windows, Mac och Linux.",
-        homePageSection2Card4Title: "Enkel konfiguration",
-        homePageSection2Card4Subtitle: "Allt görs via en enkel textfil.",
-        homePageSection2Card5Title: "Ren",
-        homePageSection2Card5Subtitle: "Servern lämnar inga onödiga filer utanför sin katalog.",
-        homePageSection2Card6Title: "Snabb start",
-        homePageSection2Card6Subtitle: "Ladda ner och kör servern direkt.",
-        homePageSection3Title: "Vackert på alla plattformar",
-        homePageSection3Subtitle: "Minimalistisk och praktisk design med känsla.",
-        homePageSection4Title: "En server, synkronisera allt",
-        homePageSection4Subtitle: "Synkronisera alla dina data enkelt med en enda server.",
+        download: "Ladda ner",
+        notes: "Anteckningar",
+        music: "Musik",
+        photos: "Foton",
+        cloud: "Moln",
+        server: "Server"
+    },
+    home: {
+        title: "Amphi Apps - En server, synkronisera allt",
+        hero: {
+            title: "Alla dina data i dina händer",
+            subtitle: "Kör din egen server och synkronisera dina data."
+        },
+        setup: {
+            title: "Enkel installation",
+            subtitle: "Serverinställning är inte längre bara för utvecklare.",
+            features: {
+                noDeps: {
+                    title: "Inga beroenden",
+                    description: "Behöver inte installera extra paket för att konfigurera servern."
+                },
+                builtInDb: {
+                    title: "Inbyggd databas",
+                    description: "Ingen extern databas behöver konfigureras."
+                },
+                crossPlatform: {
+                    title: "Plattformsoberoende",
+                    description: "Servern kan köras på Windows, Mac och Linux."
+                },
+                simpleConfig: {
+                    title: "Enkel konfiguration",
+                    description: "Allt görs via en enkel textfil."
+                },
+                clean: {
+                    title: "Ren",
+                    description: "Servern lämnar inga onödiga filer utanför sin katalog."
+                },
+                quickStart: {
+                    title: "Snabb start",
+                    description: "Ladda ner och kör servern direkt."
+                }
+            }
+        },
+        design: {
+            title: "Vackert på alla plattformar",
+            subtitle: "Minimalistisk och praktisk design med känsla."
+        },
+        sync: {
+            title: "En server, synkronisera allt",
+            subtitle: "Synkronisera alla dina data enkelt med en enda server."
+        },
         setupServer: "Ställ in servern",
         downloadApps: "Ladda ner appar",
-        download: "Ladda ner",
-        downloadOnPackageManager: "Ladda ner via paketmanager",
-        downloadAPK: "Ladda ner APK",
-        downloadIPA: "Ladda ner IPA",
         startNow: "Börja nu",
-        notesPageTitle: "Där alla dina tankar bor",
-        notesPageSubtitle: "Skriv dina berättelser fritt, när som helst och var som helst.",
-        musicPageTitle: "Ditt favoritmusikbibliotek",
-        musicPageSubtitle: "Njut av dina favoriter i bästa kvalitet."
+    },
+    notes: {
+        title: "Där alla dina tankar bor",
+        subtitle: "Skriv dina berättelser fritt, när som helst och var som helst.",
+    },
+    music: {
+        title: "Ditt favoritmusikbibliotek",
+        subtitle: "Njut av dina favoriter i bästa kvalitet.",
+    },
+    photos: {
+
+    },
+    cloud: {
+        title: "My Digital Treasure Vault",
+        subtitle: "Keep your important files safe.",
+    },
+    server: {
+        setupGuide: "Setup Guide",
+        youtubeTutorial: "YouTube Tutorial",
     }
 };
 

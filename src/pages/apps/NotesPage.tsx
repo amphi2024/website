@@ -93,12 +93,12 @@ export default function NotesPage() {
         <AppPage>
             <AppPageSection>
                 <h1>
-                    {t("notesPageTitle")}
+                    {t("notes:title")}
                 </h1>
                 <h2>
-                    {t("notesPageSubtitle")}
+                    {t("notes:subtitle")}
                 </h2>
-                <AppPreview src={preview} alt={"notesAppPreview"} loading="eager"/>
+                <AppPreview src={preview} alt={"Preview"} loading="eager"/>
 
                 <DownloadFieldContainer>
 

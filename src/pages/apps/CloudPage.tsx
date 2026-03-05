@@ -94,12 +94,12 @@ export default function CloudPage() {
         <AppPage>
             <AppPageSection>
                 <h1>
-                    {t("cloudPageTitle")}
+                    {t("cloud:title")}
                 </h1>
                 <h2>
-                    {t("cloudPageSubtitle")}
+                    {t("cloud:subtitle")}
                 </h2>
-                <AppPreview src={preview} alt={"cloudAppPreview"} loading="eager"/>
+                <AppPreview src={preview} alt={"Preview"} loading="eager"/>
 
                 <DownloadFieldContainer>
 

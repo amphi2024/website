@@ -27,7 +27,7 @@ const SetupGuide = styled.button`
 
 export default function ServerPage() {
 
-    const [t, i18n] = useTranslation();
+    const {t, i18n} = useTranslation("server");
 
     useEffect(() => {
         document.title = "Server for Amphi Apps";
@@ -38,10 +38,10 @@ export default function ServerPage() {
         <AppPage>
             <AppPageSection>
                 <h1>
-                    {t("serverPageTitle")}
+                    {t("title")}
                 </h1>
                 <h2>
-                    {t("serverPageSubtitle")}
+                    {t("subtitle")}
                 </h2>
 
                 <img src={"images/server-logo.png"} alt="Server Logo" style={{
@@ -57,7 +57,8 @@ export default function ServerPage() {
                 }}>{serverVersion} / {new Date(2026, 1, 3).toLocaleDateString(i18n.language, {
                     month: 'short',
                     day: 'numeric',
-                    year: 'numeric'})}
+                    year: 'numeric'
+                })}
                 </LinkButton>
 
                 <div>

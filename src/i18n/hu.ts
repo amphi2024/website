@@ -1,68 +1,94 @@
 const data = {
-    translation: {
-        appsPageTitle: "Amphi Apps - Egy szerver, szinkronizáljon mindent",
-        gamesPageTitle: "Amphi Games",
-        donatePageTitle: "Adományozz az Amphi-nak",
+    common: {
         apps: "Alkalmazások",
         games: "Játékok",
-        donate: "Adományozás",
+        pricing: "Pricing",
         windows: "Windows",
         mac: "Mac",
         linux: "Linux",
         android: "Android",
         ios: "IOS",
-        appsPageHeader: "Egy szerver, szinkronizáljon mindent",
-        servers: "Szerverek",
-        downloadServer: "Letöltés szerver",
+        improveTranslations: "Improve Translations",
         privacyPolicy: "Adatvédelmi irányelvek",
         termsAndCondition: "Felhasználási feltételek",
-        github: "Github",
-        appStores: "Alkalmazásboltok",
-        binaries: "Binaries",
-        packageManagers: "Csomagkezelők",
         allReleases: "Minden kiadás",
         sourceCode: "Forráskód",
-        notesAppName: "Jegyzetek",
-        notesAppSubtitle: "Minimalista dizájn, maximális funkcionalitás",
-        musicAppName: "Zene",
-        cubeTimeAppName: "CubeTime",
-        cloudAppName: "Felhő",
-        photosAppName: "Fotók",
         inPlanning: "Tervezés alatt",
-        donationPageHeader: "Élvezted a alkalmazásainkat és játékainkat?",
-        donationMessage: "A támogatásod sokat jelent számunkra, és segít folytatnunk a frissítések kiadását és a minőség javítását. Az adományaiddal több időt tudunk szentelni a fejlesztésre, amely közvetlenül javítja alkalmazásaink és játékaink minőségét és teljességét. Ezen kívül a nagylelkű hozzájárulásaid segítenek fedezni a weboldal tárolási és alkalmazásbolt regisztrációs díjait. Nagyon köszönjük a támogatásodat!",
         latestVersion: "Legújabb",
-        homePageSection1Title: "Minden adat a kezedben van",
-        homePageSection1Subtitle: "Futtasd a saját szervered, és szinkronizáld az adataidat.",
-        homePageSection2Title: "Egyszerű beállítás",
-        homePageSection2Subtitle: "A szerver beállítása már nem csak fejlesztőknek szól.",
-        homePageSection2Card1Title: "Nincs függőség",
-        homePageSection2Card1Subtitle: "Nincs szükség extra csomagokra a kezdéshez.",
-        homePageSection2Card2Title: "Beépített adatbázis",
-        homePageSection2Card2Subtitle: "Nem kell külön adatbázist beállítanod.",
-        homePageSection2Card3Title: "Platformfüggetlen",
-        homePageSection2Card3Subtitle: "A szerver futtatható Windows, macOS vagy Linux rendszeren.",
-        homePageSection2Card4Title: "Egyszerű konfiguráció",
-        homePageSection2Card4Subtitle: "Csak szerkeszteni kell egy szövegfájlt a beállításhoz.",
-        homePageSection2Card5Title: "Tiszta",
-        homePageSection2Card5Subtitle: "Nem hagy felesleges fájlokat a szerverkönyvtáron kívül.",
-        homePageSection2Card6Title: "Gyors indítás",
-        homePageSection2Card6Subtitle: "Csak töltsd le és futtasd — ilyen egyszerű.",
-        homePageSection3Title: "Gyönyörű minden platformon",
-        homePageSection3Subtitle: "Tapasztald meg a minimalistát és funkcionálist, érzelmi mélységgel minden platformon.",
-        homePageSection4Title: "Egy szerver, minden szinkronizálva",
-        homePageSection4Subtitle: "Szinkronizáld az összes adatodat könnyedén egy egyszerű szerverrel.",
+        download: "Letöltés",
+        notes: "Jegyzetek",
+        music: "Zene",
+        photos: "Fotók",
+        cloud: "Felhő",
+        server: "Server"
+    },
+    home: {
+        title: "Amphi Apps - Egy szerver, szinkronizáljon mindent",
+        hero: {
+            title: "Minden adat a kezedben van",
+            subtitle: "Futtasd a saját szervered, és szinkronizáld az adataidat."
+        },
+        setup: {
+            title: "Egyszerű beállítás",
+            subtitle: "A szerver beállítása már nem csak fejlesztőknek szól.",
+            features: {
+                noDeps: {
+                    title: "Nincs függőség",
+                    description: "Nincs szükség extra csomagokra a kezdéshez."
+                },
+                builtInDb: {
+                    title: "Beépített adatbázis",
+                    description: "Nem kell külön adatbázist beállítanod."
+                },
+                crossPlatform: {
+                    title: "Platformfüggetlen",
+                    description: "A szerver futtatható Windows, macOS vagy Linux rendszeren."
+                },
+                simpleConfig: {
+                    title: "Egyszerű konfiguráció",
+                    description: "Csak szerkeszteni kell egy szövegfájlt a beállításhoz."
+                },
+                clean: {
+                    title: "Tiszta",
+                    description: "Nem hagy felesleges fájlokat a szerverkönyvtáron kívül."
+                },
+                quickStart: {
+                    title: "Gyors indítás",
+                    description: "Csak töltsd le és futtasd — ilyen egyszerű."
+                }
+            }
+        },
+        design: {
+            title: "Gyönyörű minden platformon",
+            subtitle: "Tapasztald meg a minimalistát és funkcionálist, érzelmi mélységgel minden platformon."
+        },
+        sync: {
+            title: "Egy szerver, minden szinkronizálva",
+            subtitle: "Szinkronizáld az összes adatodat könnyedén egy egyszerű szerverrel."
+        },
         setupServer: "Szerver beállítása",
         downloadApps: "Alkalmazások letöltése",
-        download: "Letöltés",
-        downloadOnPackageManager: "Letöltés csomagkezelőn keresztül",
-        downloadAPK: "APK letöltése",
-        downloadIPA: "IPA letöltése",
         startNow: "Kezdés most",
-        notesPageTitle: "Ahol az összes gondolatod él",
-        notesPageSubtitle: "Írd történeteidet szabadon, bármikor és bárhol.",
-        musicPageTitle: "Személyes zenei könyvtárad",
-        musicPageSubtitle: "Élvezd kedvenceidet kiváló minőségben — bármikor."
+    },
+    notes: {
+        title: "Ahol az összes gondolatod él",
+        subtitle: "Írd történeteidet szabadon, bármikor és bárhol.",
+    },
+    music: {
+        title: "Személyes zenei könyvtárad",
+        subtitle: "Élvezd kedvenceidet kiváló minőségben — bármikor.",
+    },
+    photos: {
+
+    },
+    cloud: {
+        title: "My Digital Treasure Vault",
+        subtitle: "Keep your important files safe.",
+    },
+    server: {
+
+        setupGuide: "Setup Guide",
+        youtubeTutorial: "YouTube Tutorial",
     }
 };
 

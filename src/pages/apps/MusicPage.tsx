@@ -100,12 +100,12 @@ export default function MusicPage() {
         <AppPage>
             <AppPageSection>
                 <h1>
-                    {t("musicPageTitle")}
+                    {t("music:title")}
                 </h1>
                 <h2>
-                    {t("musicPageSubtitle")}
+                    {t("music:subtitle")}
                 </h2>
-                <AppPreview src={preview} alt={"musicAppPreview"} loading="eager"/>
+                <AppPreview src={preview} alt={"Preview"} loading="eager"/>
 
                 <DownloadFieldContainer>
 

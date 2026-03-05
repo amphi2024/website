@@ -1,70 +1,90 @@
 const data = {
-    translation: {
-        appsPageTitle: "Amphi Apps - Un server, sincronizza tutto",
-        gamesPageTitle: "Amphi Games",
-        donatePageTitle: "Dona per Amphi",
+    common: {
         apps: "App",
         games: "Giochi",
-        donate: "Dona",
+        pricing: "Pricing",
         windows: "Windows",
         mac: "Mac",
         linux: "Linux",
         android: "Android",
         ios: "IOS",
-        appsPageHeader: "Un server, sincronizza tutto",
-        servers: "Server",
-        downloadServer: "Scarica server",
+        improveTranslations: "Improve Translations",
         privacyPolicy: "Privacy",
         termsAndCondition: "Termini e condizioni",
-        github: "Github",
-        appStores: "Negozio di app",
-        binaries: "Binari",
-        packageManagers: "Gestori di pacchetti",
         allReleases: "Tutte le versioni",
         sourceCode: "Codice sorgente",
-        notesAppName: "Note",
-        notesAppSubtitle: "Design minimalista, massima funzionalità",
-        musicAppName: "Musica",
-        cubeTimeAppName: "CubeTime",
-        cloudAppName: "Cloud",
-        photosAppName: "Foto",
         inPlanning: "In pianificazione",
-        donationPageHeader: "Ti sono piaciute le nostre app e giochi?",
-        donationMessage: "Il tuo supporto significa molto per noi e ci aiuta a continuare a fornire aggiornamenti e migliorare la qualità. Con le tue donazioni, possiamo dedicare più tempo allo sviluppo, il che migliora direttamente la qualità e la completezza delle nostre app e giochi. Inoltre, le tue generose contribuzioni ci aiutano a coprire le spese di hosting del sito web e le tariffe di registrazione degli store di app. Grazie mille per il tuo supporto!",
         latestVersion: "Ultima",
-        homePageSection1Title: "Tutti i tuoi dati nelle tue mani",
-        homePageSection1Subtitle: "Gestisci il tuo server e sincronizza i tuoi dati.",
-        homePageSection2Title: "Configurazione Facile",
-        homePageSection2Subtitle: "Impostare un server non è più solo per sviluppatori.",
-        homePageSection2Card1Title: "Nessuna dipendenza",
-        homePageSection2Card1Subtitle: "Non serve installare pacchetti extra per iniziare.",
-        homePageSection2Card2Title: "Database integrato",
-        homePageSection2Card2Subtitle: "Non serve configurare un database esterno.",
-        homePageSection2Card3Title: "Multi-piattaforma",
-        homePageSection2Card3Subtitle: "Esegui il server su Windows, macOS o Linux facilmente.",
-        homePageSection2Card4Title: "Configurazione semplice",
-        homePageSection2Card4Subtitle: "Basta modificare un file di testo per configurare tutto.",
-        homePageSection2Card5Title: "Pulito",
-        homePageSection2Card5Subtitle: "Il server non lascia file inutili al di fuori della sua cartella.",
-        homePageSection2Card6Title: "Avvio rapido",
-        homePageSection2Card6Subtitle: "Basta scaricare ed eseguire — è così semplice.",
-        homePageSection3Title: "Bellissimo su ogni piattaforma",
-        homePageSection3Subtitle: "Vivi un design minimalista e funzionale con profondità emotiva su tutte le piattaforme.",
-        homePageSection4Title: "Un server, sincronizza tutto",
-        homePageSection4Subtitle: "Sincronizza tutti i tuoi dati facilmente con un server semplice.",
+        download: "Scarica",
+        notes: "Note",
+        music: "Musica",
+        photos: "Foto",
+        cloud: "Cloud",
+        server: "Server"
+    },
+    home: {
+        title: "Amphi Apps - Un server, sincronizza tutto",
+        hero: {
+            title: "Tutti i tuoi dati nelle tue mani",
+            subtitle: "Gestisci il tuo server e sincronizza i tuoi dati."
+        },
+        setup: {
+            title: "Configurazione Facile",
+            subtitle: "Impostare un server non è più solo per sviluppatori.",
+            features: {
+                noDeps: {
+                    title: "Nessuna dipendenza",
+                    description: "Non serve installare pacchetti extra per iniziare."
+                },
+                builtInDb: {
+                    title: "Database integrato",
+                    description: "Non serve configurare un database esterno."
+                },
+                crossPlatform: {
+                    title: "Multi-piattaforma",
+                    description: "Esegui il server su Windows, macOS o Linux facilmente."
+                },
+                simpleConfig: {
+                    title: "Configurazione semplice",
+                    description: "Basta modificare un file di testo per configurare tutto."
+                },
+                clean: {
+                    title: "Pulito",
+                    description: "Il server non lascia file inutili al di fuori della sua cartella."
+                },
+                quickStart: {
+                    title: "Avvio rapido",
+                    description: "Basta scaricare ed eseguire — è così semplice."
+                }
+            }
+        },
+        design: {
+            title: "Bellissimo su ogni piattaforma",
+            subtitle: "Vivi un design minimalista e funzionale con profondità emotiva su tutte le piattaforme."
+        },
+        sync: {
+            title: "Un server, sincronizza tutto",
+            subtitle: "Sincronizza tutti i tuoi dati facilmente con un server semplice."
+        },
         setupServer: "Configura server",
         downloadApps: "Scarica app",
-        download: "Scarica",
-        downloadOnPackageManager: "Scarica tramite Package Manager",
-        downloadAPK: "Scarica APK",
-        downloadIPA: "Scarica IPA",
         startNow: "Inizia ora",
-        notesPageTitle: "Dove vivono tutti i tuoi pensieri",
-        notesPageSubtitle: "Scrivi liberamente le tue storie, in qualsiasi momento e luogo.",
-        musicPageTitle: "La tua libreria musicale personale",
-        musicPageSubtitle: "Goditi i tuoi preferiti nella migliore qualità — ovunque.",
-        cloudPageTitle: "Il Mio Scrigno Digitale dei Tesori",
-        cloudPageSubtitle: "Tieni al sicuro i tuoi file importanti e accedili in qualsiasi momento e ovunque."
+    },
+    notes: {
+        title: "Dove vivono tutti i tuoi pensieri",
+        subtitle: "Scrivi liberamente le tue storie, in qualsiasi momento e luogo.",
+    },
+    music: {
+        title: "La tua libreria musicale personale",
+        subtitle: "Goditi i tuoi preferiti nella migliore qualità — ovunque.",
+    },
+    cloud: {
+        title: "Il Mio Scrigno Digitale dei Tesori",
+        subtitle: "Tieni al sicuro i tuoi file importanti e accedili in qualsiasi momento e ovunque.",
+    },
+    server: {
+        setupGuide: "Setup Guide",
+        youtubeTutorial: "YouTube Tutorial",
     }
 };
 

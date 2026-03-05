@@ -1,73 +1,97 @@
 const data = {
-    translation: {
-        appsPageTitle: "تطبيقات أمفي - خادم واحد، مزامنة الجميع",
-        gamesPageTitle: "ألعاب أمفي",
-        donatePageTitle: "تبرع لأمفي",
+    common: {
         apps: "التطبيقات",
         games: "الألعاب",
-        donate: "تبرع",
+        pricing: "Pricing",
         windows: "ويندوز",
         mac: "ماك",
         linux: "لينكس",
         android: "أندرويد",
         ios: "IOS",
-        appsPageHeader: "خادم واحد، مزامنة الجميع",
-        appsPageSubtitle: "باستخدام خادم واحد، يمكنك مزامنة بيانات جميع التطبيقات الموجودة أدناه.",
-        servers: "الخوادم",
-        downloadServer: "تنزيل الخادم",
+        homepage: "الصفحة الرئيسية",
+        improveTranslations: "Improve Translations",
         privacyPolicy: "الخصوصية",
         termsAndCondition: "الشروط والأحكام",
-        github: "جيتهب",
-        appStores: "متاجر التطبيقات",
-        binaries: "الملفات الثنائية",
-        packageManagers: "مديري الحزم",
         allReleases: "جميع الإصدارات",
         sourceCode: "رمز المصدر",
-        notesAppName: "الملاحظات",
-        notesAppSubtitle: "تصميم بسيط، أقصى قدر من الوظائف",
-        musicAppName: "الموسيقى",
-        cloudAppName: "السحابة",
-        photosAppName: "الصور",
         inPlanning: "في التخطيط",
-        donationPageHeader: "هل استمتعت بتطبيقاتنا وألعابنا؟",
-        donationMessage: "دعمك يعني الكثير بالنسبة لنا ويساعدنا في مواصلة تقديم التحديثات وتحسين الجودة. مع تبرعاتك، يمكننا تخصيص المزيد من الوقت للتطوير، مما يعزز بشكل مباشر من جودة وكمال تطبيقاتنا وألعابنا. بالإضافة إلى ذلك، تساعد تبرعاتك السخية في تغطية رسوم استضافة المواقع ورسوم التسجيل في متاجر التطبيقات. شكراً جزيلاً لدعمك!",
         latestVersion: "أحدث",
-        homePageSection1Title: "كل بياناتك في يديك",
-        homePageSection1Subtitle: "قم بتشغيل خادمك الخاص ومزامنة بياناتك.",
-        homePageSection2Title: "إعداد سهل",
-        homePageSection2Subtitle: "لم يعد إعداد الخادم مقتصرًا على المطورين فقط.",
-        homePageSection2Card1Title: "بدون تبعيات",
-        homePageSection2Card1Subtitle: "لا حاجة لتثبيت حزم إضافية للبدء.",
-        homePageSection2Card2Title: "قاعدة بيانات مدمجة",
-        homePageSection2Card2Subtitle: "لا تحتاج إلى إعداد قاعدة بيانات منفصلة لتشغيل الخادم.",
-        homePageSection2Card3Title: "متعدد المنصات",
-        homePageSection2Card3Subtitle: "يمكنك تشغيل الخادم على Windows أو Mac أو Linux بسهولة.",
-        homePageSection2Card4Title: "إعداد بسيط",
-        homePageSection2Card4Subtitle: "يكفي تحرير ملف نصي واحد لتكوين الإعدادات.",
-        homePageSection2Card5Title: "نظيف",
-        homePageSection2Card5Subtitle: "لا يترك الخادم ملفات غير ضرورية خارج مجلده الخاص.",
-        homePageSection2Card6Title: "بدء سريع",
-        homePageSection2Card6Subtitle: "فقط قم بالتنزيل والتشغيل للبدء.",
-        homePageSection3Title: "جمال عبر كل المنصات",
-        homePageSection3Subtitle: "استمتع بتصميم عملي وبسيط ذو لمسة جمالية على كل المنصات.",
-        homePageSection4Title: "خادم واحد لمزامنة كل شيء",
-        homePageSection4Subtitle: "قم بمزامنة جميع بياناتك بسهولة باستخدام خادم واحد بسيط.",
+        download: "تنزيل",
+        notes: "الملاحظات",
+        music: "الموسيقى",
+        photos: "الصور",
+        cloud: "السحابة",
+        server: "Server"
+    },
+    home: {
+        title: "تطبيقات أمفي - خادم واحد، مزامنة الجميع",
+        hero: {
+            title: "كل بياناتك في يديك",
+            subtitle: "قم بتشغيل خادمك الخاص ومزامنة بياناتك."
+        },
+        setup: {
+            title: "إعداد سهل",
+            subtitle: "لم يعد إعداد الخادم مقتصرًا على المطورين فقط.",
+            features: {
+                noDeps: {
+                    title: "بدون تبعيات",
+                    description: "لا حاجة لتثبيت حزم إضافية للبدء."
+                },
+                builtInDb: {
+                    title: "قاعدة بيانات مدمجة",
+                    description: "لا تحتاج إلى إعداد قاعدة بيانات منفصلة لتشغيل الخادم."
+                },
+                crossPlatform: {
+                    title: "متعدد المنصات",
+                    description: "يمكنك تشغيل الخادم على Windows أو Mac أو Linux بسهولة."
+                },
+                simpleConfig: {
+                    title: "إعداد بسيط",
+                    description: "يكفي تحرير ملف نصي واحد لتكوين الإعدادات."
+                },
+                clean: {
+                    title: "نظيف",
+                    description: "لا يترك الخادم ملفات غير ضرورية خارج مجلده الخاص."
+                },
+                quickStart: {
+                    title: "بدء سريع",
+                    description: "فقط قم بالتنزيل والتشغيل للبدء."
+                }
+            }
+        },
+        design: {
+            title: "جمال عبر كل المنصات",
+            subtitle: "استمتع بتصميم عملي وبسيط ذو لمسة جمالية على كل المنصات."
+        },
+        sync: {
+            title: "خادم واحد لمزامنة كل شيء",
+            subtitle: "قم بمزامنة جميع بياناتك بسهولة باستخدام خادم واحد بسيط."
+        },
         setupServer: "إعداد الخادم",
         downloadApps: "تنزيل التطبيقات",
-        download: "تنزيل",
-        downloadOnPackageManager: "تنزيل عبر مدير الحزم",
-        downloadAPK: "تنزيل APK",
         startNow: "ابدأ الآن",
-        notesPageTitle: "مكان أفكارك كلها",
-        notesPageSubtitle: "اكتب قصصك بحرية، في أي وقت وأي مكان.",
-        musicPageTitle: "مكتبة الموسيقى الخاصة بي",
-        musicPageSubtitle: "استمتع بموسيقاك المفضلة بأعلى جودة، في أي وقت.",
-        serverPageTitle: "عقلك الثاني، منزلك الرقمي",
-        serverPageSubtitle: "قم بمزامنة جميع ملاحظاتك، وموسيقاك، وصورك، وملفاتك بسلاسة",
-        
-        photosPageTitle: "حيث تعيش ذكرياتك",
-        photosPageSubtitle: "التقط لحظاتك المفضلة وأعد عيشها بسهولة",
-        homepage: "الصفحة الرئيسية"
+    },
+    notes: {
+        title: "مكان أفكارك كلها",
+        subtitle: "اكتب قصصك بحرية، في أي وقت وأي مكان.",
+    },
+    music: {
+        title: "مكتبة الموسيقى الخاصة بي",
+        subtitle: "استمتع بموسيقاك المفضلة بأعلى جودة، في أي وقت.",
+    },
+    photos: {
+        title: "حيث تعيش ذكرياتك",
+        subtitle: "التقط لحظاتك المفضلة وأعد عيشها بسهولة",
+    },
+    cloud: {
+        title: "My Digital Treasure Vault",
+        subtitle: "Keep your important files safe.",
+    },
+    server: {
+        title: "عقلك الثاني، منزلك الرقمي",
+        subtitle: "قم بمزامنة جميع ملاحظاتك، وموسيقاك، وصورك، وملفاتك بسلاسة",
+        setupGuide: "Setup Guide",
+        youtubeTutorial: "YouTube Tutorial",
     }
 };
 

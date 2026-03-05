@@ -1,75 +1,97 @@
 const data = {
-    translation: {
-        appsPageTitle: "Amphi Apps - Ένας διακομιστής, συγχρονίστε τα όλα",
-        gamesPageTitle: "Amphi Games",
-        donatePageTitle: "Δωρεά για το Amphi",
+    common: {
         apps: "Εφαρμογές",
         games: "Παιχνίδια",
-        donate: "Δωρεά",
+        pricing: "Pricing",
         windows: "Windows",
         mac: "Mac",
         linux: "Linux",
         android: "Android",
         ios: "IOS",
-        appsPageHeader: "Ένας διακομιστής, συγχρονίστε τα όλα",
-        appsPageSubtitle: "Με έναν μόνο διακομιστή, μπορείτε να συγχρονίσετε τα δεδομένα όλων των εφαρμογών παρακάτω.",
-        servers: "Διακομιστές",
-        downloadServer: "Λήψη διακομιστή",
+        homepage: "Αρχική σελίδα",
+        improveTranslations: "Improve Translations",
         privacyPolicy: "Πολιτική Απορρήτου",
         termsAndCondition: "Όροι και Προϋποθέσεις",
-        github: "Github",
-        appStores: "Καταστήματα Εφαρμογών",
-        binaries: "Δυαδικά αρχεία",
-        packageManagers: "Διαχειριστές Πακέτων",
         allReleases: "Όλες οι εκδόσεις",
         sourceCode: "Κώδικας Πηγαίου Κώδικα",
-        notesAppName: "Σημειώσεις",
-        notesAppSubtitle: "Μινιμαλιστικός σχεδιασμός, μέγιστη λειτουργικότητα",
-        musicAppName: "Μουσική",
-        cubeTimeAppName: "CubeTime",
-        cloudAppName: "Cloud",
-        photosAppName: "Φωτογραφίες",
         inPlanning: "Σε Σχεδιασμό",
-        donationPageHeader: "Απολαύσατε τις εφαρμογές και τα παιχνίδια μας;",
-        donationMessage: "Η υποστήριξή σας σημαίνει πολλά για εμάς και μας βοηθά να συνεχίσουμε να παρέχουμε ενημερώσεις και να βελτιώνουμε την ποιότητα. Με τις δωρεές σας, μπορούμε να αφιερώσουμε περισσότερο χρόνο στην ανάπτυξη, κάτι που βελτιώνει άμεσα την ποιότητα και την ολοκλήρωση των εφαρμογών και των παιχνιδιών μας. Επιπλέον, οι γενναιόδωρες συνεισφορές σας βοηθούν στην κάλυψη των εξόδων φιλοξενίας ιστοσελίδων και των τελών εγγραφής στα καταστήματα εφαρμογών. Σας ευχαριστούμε πολύ για την υποστήριξή σας!",
         latestVersion: "Τελευταία",
-        homePageSection1Title: "Όλα τα δεδομένα σου στα χέρια σου",
-        homePageSection1Subtitle: "Φιλοξένησε τον δικό σου διακομιστή και συγχρόνισε τα δεδομένα σου.",
-        homePageSection2Title: "Εύκολη Ρύθμιση",
-        homePageSection2Subtitle: "Η ρύθμιση διακομιστή δεν είναι πλέον μόνο για προγραμματιστές.",
-        homePageSection2Card1Title: "Χωρίς Εξαρτήσεις",
-        homePageSection2Card1Subtitle: "Δεν χρειάζονται πρόσθετες βιβλιοθήκες για να ξεκινήσεις.",
-        homePageSection2Card2Title: "Ενσωματωμένη Βάση Δεδομένων",
-        homePageSection2Card2Subtitle: "Δεν χρειάζεται ξεχωριστή βάση δεδομένων για να τρέξει ο διακομιστής.",
-        homePageSection2Card3Title: "Πλατφόρμες Πολλαπλών",
-        homePageSection2Card3Subtitle: "Μπορείτε να τρέξετε τον διακομιστή σε Windows, macOS ή Linux.",
-        homePageSection2Card4Title: "Απλή Διαμόρφωση",
-        homePageSection2Card4Subtitle: "Αρκεί να επεξεργαστείς ένα αρχείο κειμένου για να διαμορφώσεις τα πάντα.",
-        homePageSection2Card5Title: "Καθαρό",
-        homePageSection2Card5Subtitle: "Δεν αφήνει περιττά αρχεία εκτός του φακέλου του διακομιστή.",
-        homePageSection2Card6Title: "Γρήγορη Εκκίνηση",
-        homePageSection2Card6Subtitle: "Απλώς κατέβασε και τρέξε — είναι τόσο απλό.",
-        homePageSection3Title: "Όμορφο σε κάθε πλατφόρμα",
-        homePageSection3Subtitle: "Εμπειρία μινιμαλιστικού & πρακτικού σχεδίου με συναισθηματική ποιότητα σε όλες τις πλατφόρμες.",
-        homePageSection4Title: "Ένας διακομιστής, συγχρόνισε τα πάντα",
-        homePageSection4Subtitle: "Συγχρόνισε όλα σου τα δεδομένα εύκολα με έναν απλό διακομιστή.",
+        download: "Λήψη",
+        notes: "Σημειώσεις",
+        music: "Μουσική",
+        photos: "Φωτογραφίες",
+        cloud: "Cloud",
+        server: "Server"
+    },
+    home: {
+        title: "Amphi Apps - Ένας διακομιστής, συγχρονίστε τα όλα",
+        hero: {
+            title: "Όλα τα δεδομένα σου στα χέρια σου",
+            subtitle: "Φιλοξένησε τον δικό σου διακομιστή και συγχρόνισε τα δεδομένα σου."
+        },
+        setup: {
+            title: "Εύκολη Ρύθμιση",
+            subtitle: "Η ρύθμιση διακομιστή δεν είναι πλέον μόνο για προγραμματιστές.",
+            features: {
+                noDeps: {
+                    title: "Χωρίς Εξαρτήσεις",
+                    description: "Δεν χρειάζονται πρόσθετες βιβλιοθήκες για να ξεκινήσεις."
+                },
+                builtInDb: {
+                    title: "Ενσωματωμένη Βάση Δεδομένων",
+                    description: "Δεν χρειάζεται ξεχωριστή βάση δεδομένων για να τρέξει ο διακομιστής."
+                },
+                crossPlatform: {
+                    title: "Πλατφόρμες Πολλαπλών",
+                    description: "Μπορείτε να τρέξετε τον διακομιστή σε Windows, macOS ή Linux."
+                },
+                simpleConfig: {
+                    title: "Απλή Διαμόρφωση",
+                    description: "Αρκεί να επεξεργαστείς ένα αρχείο κειμένου για να διαμορφώσεις τα πάντα."
+                },
+                clean: {
+                    title: "Καθαρό",
+                    description: "Δεν αφήνει περιττά αρχεία εκτός του φακέλου του διακομιστή."
+                },
+                quickStart: {
+                    title: "Γρήγορη Εκκίνηση",
+                    description: "Απλώς κατέβασε και τρέξε — είναι τόσο απλό."
+                }
+            }
+        },
+        design: {
+            title: "Όμορφο σε κάθε πλατφόρμα",
+            subtitle: "Εμπειρία μινιμαλιστικού & πρακτικού σχεδίου με συναισθηματική ποιότητα σε όλες τις πλατφόρμες."
+        },
+        sync: {
+            title: "Ένας διακομιστής, συγχρόνισε τα πάντα",
+            subtitle: "Συγχρόνισε όλα σου τα δεδομένα εύκολα με έναν απλό διακομιστή."
+        },
         setupServer: "Ρύθμιση διακομιστή",
         downloadApps: "Λήψη εφαρμογών",
-        download: "Λήψη",
-        downloadOnPackageManager: "Λήψη μέσω διαχειριστή πακέτων",
-        downloadAPK: "Λήψη APK",
-        downloadIPA: "Λήψη IPA",
         startNow: "Ξεκίνα τώρα",
-        notesPageTitle: "Όπου ζουν όλες οι σκέψεις σου",
-        notesPageSubtitle: "Γράψε τις ιστορίες σου ελεύθερα, οποτεδήποτε και οπουδήποτε.",
-        musicPageTitle: "Η προσωπική μουσική σου βιβλιοθήκη",
-        musicPageSubtitle: "Απόλαυσε τα αγαπημένα σου τραγούδια με την καλύτερη ποιότητα — παντού.",
-        serverPageTitle: "Ο δεύτερος εγκέφαλός σας, το ψηφιακό σας σπίτι",
-        serverPageSubtitle: "Συγχρονίστε όλες τις σημειώσεις, μουσική, φωτογραφίες και αρχεία σας χωρίς κόπο",
-        
-        photosPageTitle: "Όπου ζουν οι αναμνήσεις σας",
-        photosPageSubtitle: "Αποτυπώστε και ξαναζήστε τις αγαπημένες σας στιγμές με ευκολία",
-        homepage: "Αρχική σελίδα"
+    },
+    notes: {
+        title: "Όπου ζουν όλες οι σκέψεις σου",
+        subtitle: "Γράψε τις ιστορίες σου ελεύθερα, οποτεδήποτε και οπουδήποτε.",
+    },
+    music: {
+        title: "Η προσωπική μουσική σου βιβλιοθήκη",
+        subtitle: "Απόλαυσε τα αγαπημένα σου τραγούδια με την καλύτερη ποιότητα — παντού.",
+    },
+    photos: {
+        title: "Όπου ζουν οι αναμνήσεις σας",
+        subtitle: "Αποτυπώστε και ξαναζήστε τις αγαπημένες σας στιγμές με ευκολία",
+    },
+    cloud: {
+        title: "My Digital Treasure Vault",
+        subtitle: "Keep your important files safe.",
+    },
+    server: {
+        title: "Ο δεύτερος εγκέφαλός σας, το ψηφιακό σας σπίτι",
+        subtitle: "Συγχρονίστε όλες τις σημειώσεις, μουσική, φωτογραφίες και αρχεία σας χωρίς κόπο",
+        setupGuide: "Setup Guide",
+        youtubeTutorial: "YouTube Tutorial",
     }
 };
 

@@ -1,68 +1,92 @@
 const data = {
-    translation: {
-        appsPageTitle: "Amphi Apps - Один сервер, синхронізуйте все",
-        gamesPageTitle: "Amphi Games",
-        donatePageTitle: "Пожертвувати для Amphi",
+    common: {
         apps: "Додатки",
         games: "Ігри",
-        donate: "Пожертвувати",
+        pricing: "Pricing",
         windows: "Windows",
         mac: "Mac",
         linux: "Linux",
         android: "Android",
         ios: "IOS",
-        appsPageHeader: "Один сервер, синхронізуйте все",
-        servers: "Сервери",
-        downloadServer: "Завантажити сервер",
+        improveTranslations: "Improve Translations",
         privacyPolicy: "Політика конфіденційності",
         termsAndCondition: "Умови та положення",
-        github: "Github",
-        appStores: "Магазини додатків",
-        binaries: "Бінарні файли",
-        packageManagers: "Менеджери пакетів",
         allReleases: "Усі версії",
         sourceCode: "Код джерела",
-        notesAppName: "Нотатки",
-        notesAppSubtitle: "Мінімалістичний дизайн, максимальна функціональність",
-        musicAppName: "Музика",
-        cubeTimeAppName: "CubeTime",
-        cloudAppName: "Хмара",
-        photosAppName: "Фотографії",
         inPlanning: "У планах",
-        donationPageHeader: "Вам сподобались наші додатки та ігри?",
-        donationMessage: "Ваша підтримка дуже важлива для нас і допомагає нам продовжувати надавати оновлення та покращувати якість. З вашими пожертвами ми можемо присвятити більше часу розвитку, що безпосередньо покращує якість і завершеність наших додатків та ігор. Крім того, ваші щедрі внески допомагають покрити витрати на хостинг сайту та збори за реєстрацію в магазинах додатків. Велике спасибі за вашу підтримку!",
         latestVersion: "Остання",
-        homePageSection1Title: "Всі ваші дані у ваших руках",
-        homePageSection1Subtitle: "Запустіть власний сервер і синхронізуйте свої дані.",
-        homePageSection2Title: "Легке налаштування",
-        homePageSection2Subtitle: "Налаштування сервера вже не лише для розробників.",
-        homePageSection2Card1Title: "Без залежностей",
-        homePageSection2Card1Subtitle: "Не потрібно встановлювати додаткові пакети.",
-        homePageSection2Card2Title: "Вбудована база даних",
-        homePageSection2Card2Subtitle: "Не потрібно налаштовувати зовнішню базу даних.",
-        homePageSection2Card3Title: "Кросплатформенність",
-        homePageSection2Card3Subtitle: "Сервер можна запускати на Windows, Mac або Linux.",
-        homePageSection2Card4Title: "Проста конфігурація",
-        homePageSection2Card4Subtitle: "Налаштування через простий текстовий файл.",
-        homePageSection2Card5Title: "Чистий",
-        homePageSection2Card5Subtitle: "Сервер не залишає зайвих файлів поза своєю директорією.",
-        homePageSection2Card6Title: "Швидкий старт",
-        homePageSection2Card6Subtitle: "Просто завантажте і запустіть сервер.",
-        homePageSection3Title: "Красивий на будь-якій платформі",
-        homePageSection3Subtitle: "Мінімалістичний і практичний дизайн з емоційним акцентом.",
-        homePageSection4Title: "Один сервер, синхронізація всього",
-        homePageSection4Subtitle: "Легко синхронізуйте всі дані з одним простим сервером.",
+        download: "Завантажити",
+        notes: "Нотатки",
+        music: "Музика",
+        photos: "Фотографії",
+        cloud: "Хмара",
+        server: "Server"
+    },
+    home: {
+        title: "Amphi Apps - Один сервер, синхронізуйте все",
+        hero: {
+            title: "Всі ваші дані у ваших руках",
+            subtitle: "Запустіть власний сервер і синхронізуйте свої дані."
+        },
+        setup: {
+            title: "Легке налаштування",
+            subtitle: "Налаштування сервера вже не лише для розробників.",
+            features: {
+                noDeps: {
+                    title: "Без залежностей",
+                    description: "Не потрібно встановлювати додаткові пакети."
+                },
+                builtInDb: {
+                    title: "Вбудована база даних",
+                    description: "Не потрібно налаштовувати зовнішню базу даних."
+                },
+                crossPlatform: {
+                    title: "Кросплатформенність",
+                    description: "Сервер можна запускати на Windows, Mac або Linux."
+                },
+                simpleConfig: {
+                    title: "Проста конфігурація",
+                    description: "Налаштування через простий текстовий файл."
+                },
+                clean: {
+                    title: "Чистий",
+                    description: "Сервер не залишає зайвих файлів поза своєю директорією."
+                },
+                quickStart: {
+                    title: "Швидкий старт",
+                    description: "Просто завантажте і запустіть сервер."
+                }
+            }
+        },
+        design: {
+            title: "Красивий на будь-якій платформі",
+            subtitle: "Мінімалістичний і практичний дизайн з емоційним акцентом."
+        },
+        sync: {
+            title: "Один сервер, синхронізація всього",
+            subtitle: "Легко синхронізуйте всі дані з одним простим сервером."
+        },
         setupServer: "Налаштувати сервер",
         downloadApps: "Завантажити додатки",
-        download: "Завантажити",
-        downloadOnPackageManager: "Завантажити через менеджер пакетів",
-        downloadAPK: "Завантажити APK",
-        downloadIPA: "Завантажити IPA",
         startNow: "Почати зараз",
-        notesPageTitle: "Де живуть всі ваші думки",
-        notesPageSubtitle: "Вільно пишіть свої історії будь-де і будь-коли.",
-        musicPageTitle: "Ваша улюблена музична бібліотека",
-        musicPageSubtitle: "Слухайте улюблене у найкращій якості."
+    },
+    notes: {
+        title: "Де живуть всі ваші думки",
+        subtitle: "Вільно пишіть свої історії будь-де і будь-коли.",
+    },
+    music: {
+        title: "Ваша улюблена музична бібліотека",
+        subtitle: "Слухайте улюблене у найкращій якості.",
+    },
+    photos: {
+    },
+    cloud: {
+        title: "My Digital Treasure Vault",
+        subtitle: "Keep your important files safe.",
+    },
+    server: {
+        setupGuide: "Setup Guide",
+        youtubeTutorial: "YouTube Tutorial",
     }
 };
 

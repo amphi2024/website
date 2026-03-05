@@ -1,75 +1,97 @@
 const data = {
-    translation: {
-        appsPageTitle: "Amphi Apps - One Server, Sync All",
-        donatePageTitle: "Donate for Amphi",
+    common: {
         apps: "Apps",
         games: "Games",
-        donate: "Donate",
+        pricing: "Pricing",
         windows: "Windows",
         mac: "Mac",
         linux: "Linux",
         android: "Android",
-        ios: "IOS",
-        appsPageHeader: "One Server, Sync All",
-        appsPageSubtitle: "Once you set up a server, you can sync the data of the apps listed below.",
-        servers: "ServerPage",
-        downloadServer: "Download Server",
-        privacyPolicy: "Privacy",
-        termsAndCondition: "Terms",
-        github: "Github",
-        appStores: "App Stores",
-        binaries: "Binaries",
-        packageManagers: "Package Managers",
-        allReleases: "All Releases",
-        sourceCode: "Source Code",
-        notesAppName: "Notes",
-        notesAppSubtitle: "Minimal design, maximum functionality",
-        musicAppName: "Music",
-        cloudAppName: "Cloud",
-        photosAppName: "Photos",
-        inPlanning: "In Planning",
-        latestVersion: "Latest",
-        homePageSection1Title: "All Your Data in Your Hands",
-        homePageSection1Subtitle: "Run your own server and synchronize your data.",
-        homePageSection2Title: "Easy Setup",
-        homePageSection2Subtitle: "Server setup is no longer just for developers.",
-        homePageSection2Card1Title: "No Dependencies",
-        homePageSection2Card1Subtitle: "No need to install extra packages to set up the server.",
-        homePageSection2Card2Title: "Built-in Database",
-        homePageSection2Card2Subtitle: "No need to configure a database to run the server.",
-        homePageSection2Card3Title: "Cross-Platform",
-        homePageSection2Card3Subtitle: "You can run the server on Windows, Mac, or Linux.",
-        homePageSection2Card4Title: "Simple Configuration",
-        homePageSection2Card4Subtitle: "Just edit a text file to configure everything.",
-        homePageSection2Card5Title: "Clean",
-        homePageSection2Card5Subtitle: "The server leaves no unnecessary files outside its running directory.",
-        homePageSection2Card6Title: "Quick Start",
-        homePageSection2Card6Subtitle: "Just download and run the server to get started.",
-        homePageSection3Title: "Beautiful on Every Platform",
-        homePageSection3Subtitle: "Experience a minimalist and practical design with emotional appeal across all platforms.",
-        homePageSection4Title: "One Server, Sync All",
-        homePageSection4Subtitle: "Easily sync all your data with one simple server.",
-        setupServer: "Set Up Server",
-        downloadApps: "Download Apps",
-        download: "Download",
-        downloadOnPackageManager: "Download via Package Manager",
-        downloadAPK: "Download APK",
-        downloadIPA: "Download IPA",
-        startNow: "Start Now",
-        notesPageTitle: "Where All Your Thoughts Live",
-        notesPageSubtitle: "Jot down your thoughts and stories anytime, anywhere.",
-        musicPageTitle: "Your Favorite Music Library",
-        musicPageSubtitle: "Enjoy your favorites in the highest quality, anytime.",
-        serverPageTitle: "Your Second Brain, Your Digital Home",
-        serverPageSubtitle: "Sync all your notes, music, photos, and files seamlessly.",
-        setupGuide: "Setup Guide",
-        youtubeTutorial: "YouTube Tutorial",
-        photosPageTitle: "Where Your Memories Live",
-        photosPageSubtitle: "Capture and relive your favorite moments with ease.",
+        ios: "iOS",
         homepage: "Homepage",
         improveTranslations: "Improve Translations",
-        cloudPageTitle: "My Digital Treasure Vault",
-        cloudPageSubtitle: "Keep your important files safe and access them anytime, anywhere.",
+        privacyPolicy: "Privacy",
+        termsAndCondition: "Terms",
+        allReleases: "All Releases",
+        sourceCode: "Source Code",
+        inPlanning: "In Planning",
+        latestVersion: "Latest",
+        download: "Download",
+        notes: "Notes",
+        music: "Music",
+        photos: "Photos",
+        cloud: "Cloud",
+        server: "Server"
+    },
+    home: {
+        title: "Amphi Apps - One Server, Sync All",
+        hero: {
+            title: "All Your Data in Your Hands",
+            subtitle: "Run your own server and synchronize your data."
+        },
+        setup: {
+            title: "Easy Setup",
+            subtitle: "Server setup is no longer just for developers.",
+            features: {
+                noDeps: {
+                    title: "No Dependencies",
+                    description: "No need to install extra packages to set up the server."
+                },
+                builtInDb: {
+                    title: "Built-in Database",
+                    description: "No need to configure a database to run the server."
+                },
+                crossPlatform: {
+                    title: "Cross-Platform",
+                    description: "You can run the server on Windows, Mac, or Linux."
+                },
+                simpleConfig: {
+                    title: "Simple Configuration",
+                    description: "Just edit a text file to configure everything."
+                },
+                clean: {
+                    title: "Clean",
+                    description: "The server leaves no unnecessary files outside its running directory."
+                },
+                quickStart: {
+                    title: "Quick Start",
+                    description: "Just download and run the server to get started."
+                }
+            }
+        },
+        design: {
+            title: "Beautiful on Every Platform",
+            subtitle: "Experience a minimalist and practical design with emotional appeal across all platforms."
+        },
+        sync: {
+            title: "One Server, Sync All",
+            subtitle: "Easily sync all your data with one simple server."
+        },
+        setupServer: "Set Up Server",
+        downloadApps: "Download Apps",
+        startNow: "Start Now",
+    },
+    notes: {
+        title: "Where All Your Thoughts Live",
+        subtitle: "Jot down your thoughts and stories anytime, anywhere.",
+    },
+    music: {
+        title: "Your Personal Music Library",
+        subtitle: "Enjoy your favorites in the highest quality, anytime.",
+    },
+    photos: {
+        title: "Where Your Memories Live",
+        subtitle: "Capture and relive your favorite moments with ease.",
+    },
+    cloud: {
+        title: "My Digital Treasure Vault",
+        subtitle: "Keep your important files safe and access them anytime, anywhere.",
+    },
+    server: {
+        title: "Your Second Brain, Your Digital Home",
+        subtitle: "Sync all your notes, music, photos, and files seamlessly.",
+        setupGuide: "Setup Guide",
+        youtubeTutorial: "YouTube Tutorial",
     }
 };
 

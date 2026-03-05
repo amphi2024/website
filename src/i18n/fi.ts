@@ -1,68 +1,92 @@
 const data = {
-    translation: {
-        appsPageTitle: "Amphi Apps - Yksi palvelin, synkronoi kaikki",
-        gamesPageTitle: "Amphi Games",
-        donatePageTitle: "Lahjoita Amphille",
+    common: {
         apps: "Sovellukset",
         games: "Pelit",
-        donate: "Lahjoita",
+        pricing: "Pricing",
         windows: "Windows",
         mac: "Mac",
         linux: "Linux",
         android: "Android",
         ios: "IOS",
-        appsPageHeader: "Yksi palvelin, synkronoi kaikki",
-        servers: "Palvelimet",
-        downloadServer: "Lataa palvelin",
+        improveTranslations: "Improve Translations",
         privacyPolicy: "Tietosuojakäytäntö",
         termsAndCondition: "Ehdot",
-        github: "Github",
-        appStores: "Sovelluskaupat",
-        binaries: "Binääritiedostot",
-        packageManagers: "Pakettienhallinta",
         allReleases: "Kaikki julkaisun versiot",
         sourceCode: "Lähdekoodi",
-        notesAppName: "Muistiinpanot",
-        notesAppSubtitle: "Minimalistinen suunnittelu, maksimaalinen toiminnallisuus",
-        musicAppName: "Musiikki",
-        cubeTimeAppName: "CubeTime",
-        cloudAppName: "Pilvi",
-        photosAppName: "Valokuvat",
         inPlanning: "Suunnittelussa",
-        donationPageHeader: "Onko meidän sovellukset ja pelit olleet hauskoja?",
-        donationMessage: "Tukesi merkitsee meille paljon ja auttaa meitä tarjoamaan päivityksiä ja parantamaan laatua. Lahjoitustesi avulla voimme käyttää enemmän aikaa kehitykseen, mikä parantaa suoraan sovelluksiemme ja pelien laatua ja täydellisyyttä. Lisäksi lahjoituksesi auttavat kattamaan verkkosivuston hosting- ja sovelluskaupan rekisteröintimaksut. Kiitos paljon tuestasi!",
         latestVersion: "Uusin",
-        homePageSection1Title: "Kaikki tietosi käsissäsi",
-        homePageSection1Subtitle: "Isännöi oma palvelimesi ja synkronoi tietosi.",
-        homePageSection2Title: "Helppo asennus",
-        homePageSection2Subtitle: "Palvelimen asennus ei ole enää kehittäjille ainoa vaihtoehto.",
-        homePageSection2Card1Title: "Ilman riippuvuuksia",
-        homePageSection2Card1Subtitle: "Et tarvitse lisäpaketteja aloittamiseen.",
-        homePageSection2Card2Title: "Sisäänrakennettu tietokanta",
-        homePageSection2Card2Subtitle: "Et tarvitse erillistä tietokantaa palvelimen ajamiseen.",
-        homePageSection2Card3Title: "Monialustainen",
-        homePageSection2Card3Subtitle: "Voit käyttää palvelinta Windowsissa, macOS:ssä tai Linuxissa.",
-        homePageSection2Card4Title: "Yksinkertainen määritys",
-        homePageSection2Card4Subtitle: "Muokkaa vain yhtä tekstiedostoa konfigurointia varten.",
-        homePageSection2Card5Title: "Siisti",
-        homePageSection2Card5Subtitle: "Palvelin ei jätä tarpeettomia tiedostoja oman kansionsa ulkopuolelle.",
-        homePageSection2Card6Title: "Nopea alku",
-        homePageSection2Card6Subtitle: "Lataa ja käynnistä — näin yksinkertaista se on.",
-        homePageSection3Title: "Kaunis kaikilla alustoilla",
-        homePageSection3Subtitle: "Koe minimalistinen ja käytännöllinen muotoilu tunteikkaalla otteella kaikilla alustoilla.",
-        homePageSection4Title: "Yksi palvelin, synkkaa kaikki",
-        homePageSection4Subtitle: "Synkronoi kaikki tietosi helposti yhdellä kevyellä palvelimella.",
+        download: "Lataa",
+        notes: "Muistiinpanot",
+        music: "Musiikki",
+        photos: "Valokuvat",
+        cloud: "Pilvi",
+        server: "Server"
+    },
+    home: {
+        title: "Amphi Apps - Yksi palvelin, synkronoi kaikki",
+        hero: {
+            title: "Kaikki tietosi käsissäsi",
+            subtitle: "Isännöi oma palvelimesi ja synkronoi tietosi."
+        },
+        setup: {
+            title: "Helppo asennus",
+            subtitle: "Palvelimen asennus ei ole enää kehittäjille ainoa vaihtoehto.",
+            features: {
+                noDeps: {
+                    title: "Ilman riippuvuuksia",
+                    description: "Et tarvitse lisäpaketteja aloittamiseen."
+                },
+                builtInDb: {
+                    title: "Sisäänrakennettu tietokanta",
+                    description: "Et tarvitse erillistä tietokantaa palvelimen ajamiseen."
+                },
+                crossPlatform: {
+                    title: "Monialustainen",
+                    description: "Voit käyttää palvelinta Windowsissa, macOS:ssä tai Linuxissa."
+                },
+                simpleConfig: {
+                    title: "Yksinkertainen määritys",
+                    description: "Muokkaa vain yhtä tekstiedostoa konfigurointia varten."
+                },
+                clean: {
+                    title: "Siisti",
+                    description: "Palvelin ei jätä tarpeettomia tiedostoja oman kansionsa ulkopuolelle."
+                },
+                quickStart: {
+                    title: "Nopea alku",
+                    description: "Lataa ja käynnistä — näin yksinkertaista se on."
+                }
+            }
+        },
+        design: {
+            title: "Kaunis kaikilla alustoilla",
+            subtitle: "Koe minimalistinen ja käytännöllinen muotoilu tunteikkaalla otteella kaikilla alustoilla."
+        },
+        sync: {
+            title: "Yksi palvelin, synkkaa kaikki",
+            subtitle: "Synkronoi kaikki tietosi helposti yhdellä kevyellä palvelimella."
+        },
         setupServer: "Asenna palvelin",
         downloadApps: "Lataa sovellukset",
-        download: "Lataa",
-        downloadOnPackageManager: "Lataa pakettienhallinnan kautta",
-        downloadAPK: "Lataa APK",
-        downloadIPA: "Lataa IPA",
         startNow: "Aloita nyt",
-        notesPageTitle: "Missä kaikki ajatuksesi asuvat",
-        notesPageSubtitle: "Kirjoita tarinoitasi vapaasti, milloin ja missä tahansa.",
-        musicPageTitle: "Sinun henkilökohtainen musiikkikirjasto",
-        musicPageSubtitle: "Nauti suosikeistasi parhaalla laadulla — aina ja kaikkialla."
+    },
+    notes: {
+        title: "Missä kaikki ajatuksesi asuvat",
+        subtitle: "Kirjoita tarinoitasi vapaasti, milloin ja missä tahansa.",
+    },
+    music: {
+        title: "Sinun henkilökohtainen musiikkikirjasto",
+        subtitle: "Nauti suosikeistasi parhaalla laadulla — aina ja kaikkialla.",
+    },
+    photos: {
+    },
+    cloud: {
+        title: "My Digital Treasure Vault",
+        subtitle: "Keep your important files safe.",
+    },
+    server: {
+        setupGuide: "Setup Guide",
+        youtubeTutorial: "YouTube Tutorial",
     }
 };
 

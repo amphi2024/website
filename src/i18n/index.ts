@@ -77,6 +77,8 @@ i18n
             vi: vi,
             zh: zh
         },
+        ns: ['common', 'home', 'notes', 'music', 'cloud', 'server'],
+        defaultNS: 'common',
     }).then();
 
 // export default i18n;

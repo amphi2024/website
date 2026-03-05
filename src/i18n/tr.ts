@@ -1,68 +1,92 @@
 const data = {
-    translation: {
-        appsPageTitle: "Amphi Apps - Tek bir sunucu, her şeyi senkronize et",
-        gamesPageTitle: "Amphi Games",
-        donatePageTitle: "Amphi'ye Bağış Yap",
+    common: {
         apps: "Uygulamalar",
         games: "Oyunlar",
-        donate: "Bağış Yap",
+        pricing: "Pricing",
         windows: "Windows",
         mac: "Mac",
         linux: "Linux",
         android: "Android",
         ios: "IOS",
-        appsPageHeader: "Tek bir sunucu, her şeyi senkronize et",
-        servers: "Sunucular",
-        downloadServer: "Sunucuyu indir",
+        improveTranslations: "Improve Translations",
         privacyPolicy: "Gizlilik Politikası",
         termsAndCondition: "Şartlar ve Koşullar",
-        github: "Github",
-        appStores: "Uygulama Mağazaları",
-        binaries: "Binaryler",
-        packageManagers: "Paket Yöneticileri",
         allReleases: "Tüm Sürümler",
         sourceCode: "Kaynak Kodu",
-        notesAppName: "Notlar",
-        notesAppSubtitle: "Minimalist tasarım, maksimum işlevsellik",
-        musicAppName: "Müzik",
-        cubeTimeAppName: "CubeTime",
-        cloudAppName: "Bulut",
-        photosAppName: "Fotoğraflar",
         inPlanning: "Planlama Aşamasında",
-        donationPageHeader: "Uygulamalarımızı ve oyunlarımızı beğendiniz mi?",
-        donationMessage: "Destekleriniz bizim için çok şey ifade ediyor ve güncellemeler sunmamıza ve kaliteyi artırmamıza yardımcı oluyor. Bağışlarınızla, gelişmeye daha fazla zaman ayırabiliriz ve bu da doğrudan uygulamalarımızın ve oyunlarımızın kalitesini ve tamlığını iyileştirir. Ayrıca cömert bağışlarınız, web barındırma masraflarını ve uygulama mağazası kayıt ücretlerini karşılamamıza yardımcı olur. Destekleriniz için çok teşekkür ederiz!",
         latestVersion: "Son Sürüm",
-        homePageSection1Title: "Tüm verileriniz elinizde",
-        homePageSection1Subtitle: "Kendi sunucunuzu çalıştırın ve verilerinizi senkronize edin.",
-        homePageSection2Title: "Kolay Kurulum",
-        homePageSection2Subtitle: "Sunucu kurulumu artık sadece geliştiriciler için değil.",
-        homePageSection2Card1Title: "Bağımlılık Yok",
-        homePageSection2Card1Subtitle: "Sunucu kurmak için ekstra paket yüklemeye gerek yok.",
-        homePageSection2Card2Title: "Dahili Veritabanı",
-        homePageSection2Card2Subtitle: "Harici veritabanı ayarlamanıza gerek yok.",
-        homePageSection2Card3Title: "Çapraz Platform",
-        homePageSection2Card3Subtitle: "Sunucuyu Windows, Mac veya Linux üzerinde çalıştırabilirsiniz.",
-        homePageSection2Card4Title: "Basit Yapılandırma",
-        homePageSection2Card4Subtitle: "Her şey basit bir metin dosyasıyla yapılır.",
-        homePageSection2Card5Title: "Temiz",
-        homePageSection2Card5Subtitle: "Sunucu kendi dizini dışında gereksiz dosya bırakmaz.",
-        homePageSection2Card6Title: "Hızlı Başlangıç",
-        homePageSection2Card6Subtitle: "Sunucuyu indirip çalıştırmanız yeterlidir.",
-        homePageSection3Title: "Her Platformda Güzel",
-        homePageSection3Subtitle: "Minimalist ve pratik, duygusal tasarım deneyimi.",
-        homePageSection4Title: "Tek Sunucu, Her Şey Senkron",
-        homePageSection4Subtitle: "Tüm verilerinizi tek bir sunucu ile kolayca senkronize edin.",
+        download: "İndir",
+        notes: "Notlar",
+        music: "Müzik",
+        photos: "Fotoğraflar",
+        cloud: "Bulut",
+        server: "Server"
+    },
+    home: {
+        title: "Amphi Apps - Tek bir sunucu, her şeyi senkronize et",
+        hero: {
+            title: "Tüm verileriniz elinizde",
+            subtitle: "Kendi sunucunuzu çalıştırın ve verilerinizi senkronize edin."
+        },
+        setup: {
+            title: "Kolay Kurulum",
+            subtitle: "Sunucu kurulumu artık sadece geliştiriciler için değil.",
+            features: {
+                noDeps: {
+                    title: "Bağımlılık Yok",
+                    description: "Sunucu kurmak için ekstra paket yüklemeye gerek yok."
+                },
+                builtInDb: {
+                    title: "Dahili Veritabanı",
+                    description: "Harici veritabanı ayarlamanıza gerek yok."
+                },
+                crossPlatform: {
+                    title: "Çapraz Platform",
+                    description: "Sunucuyu Windows, Mac veya Linux üzerinde çalıştırabilirsiniz."
+                },
+                simpleConfig: {
+                    title: "Basit Yapılandırma",
+                    description: "Her şey basit bir metin dosyasıyla yapılır."
+                },
+                clean: {
+                    title: "Temiz",
+                    description: "Sunucu kendi dizini dışında gereksiz dosya bırakmaz."
+                },
+                quickStart: {
+                    title: "Hızlı Başlangıç",
+                    description: "Sunucuyu indirip çalıştırmanız yeterlidir."
+                }
+            }
+        },
+        design: {
+            title: "Her Platformda Güzel",
+            subtitle: "Minimalist ve pratik, duygusal tasarım deneyimi."
+        },
+        sync: {
+            title: "Tek Sunucu, Her Şey Senkron",
+            subtitle: "Tüm verilerinizi tek bir sunucu ile kolayca senkronize edin."
+        },
         setupServer: "Sunucuyu Kur",
         downloadApps: "Uygulamaları İndir",
-        download: "İndir",
-        downloadOnPackageManager: "Paket Yöneticisinden İndir",
-        downloadAPK: "APK İndir",
-        downloadIPA: "IPA İndir",
         startNow: "Şimdi Başla",
-        notesPageTitle: "Tüm Düşüncelerinizin Yaşadığı Yer",
-        notesPageSubtitle: "Hikayelerinizi özgürce yazın, her zaman ve her yerde.",
-        musicPageTitle: "Favori Müzik Kütüphaneniz",
-        musicPageSubtitle: "Favorilerinizi en iyi kalitede dinleyin."
+    },
+    notes: {
+        title: "Tüm Düşüncelerinizin Yaşadığı Yer",
+        subtitle: "Hikayelerinizi özgürce yazın, her zaman ve her yerde.",
+    },
+    music: {
+        title: "Favori Müzik Kütüphaneniz",
+        subtitle: "Favorilerinizi en iyi kalitede dinleyin.",
+    },
+    photos: {
+    },
+    cloud: {
+        title: "My Digital Treasure Vault",
+        subtitle: "Keep your important files safe.",
+    },
+    server: {
+        setupGuide: "Setup Guide",
+        youtubeTutorial: "YouTube Tutorial",
     }
 };
 

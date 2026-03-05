@@ -1,72 +1,97 @@
 const data = {
-    translation: {
-        appsPageTitle: "Amphi Apps - Jeden server, synchronizujte vše",
-        gamesPageTitle: "Amphi Games",
-        donatePageTitle: "Darujte pro Amphi",
+    common: {
         apps: "Aplikace",
         games: "Hry",
-        donate: "Darovat",
+        pricing: "Pricing",
         windows: "Windows",
         mac: "Mac",
         linux: "Linux",
         android: "Android",
         ios: "IOS",
-        appsPageHeader: "Jeden server, synchronizujte vše",
-        servers: "Servery",
-        downloadServer: "Stáhnout server",
+        homepage: "Domovská stránka",
+        improveTranslations: "Improve Translations",
         privacyPolicy: "Ochrana soukromí",
         termsAndCondition: "Podmínky",
-        github: "Github",
-        appStores: "Obchody s aplikacemi",
-        binaries: "Binární soubory",
-        packageManagers: "Správci balíčků",
         allReleases: "Všechny verze",
         sourceCode: "Zdrojový kód",
-        notesAppName: "Poznámky",
-        notesAppSubtitle: "Minimalistický design, maximální funkčnost",
-        musicAppName: "Hudba",
-        cloudAppName: "Cloud",
-        photosAppName: "Fotografie",
         inPlanning: "V plánování",
-        donationPageHeader: "Líbily se vám naše aplikace a hry?",
-        donationMessage: "Vaše podpora pro nás znamená vše a pomáhá nám pokračovat v poskytování aktualizací a zlepšování kvality. Díky vašim darům můžeme věnovat více času vývoji, což přímo zlepšuje kvalitu a úplnost našich aplikací a her. Vaše štědré příspěvky nám také pomáhají pokrýt náklady na hosting webových stránek a registrační poplatky pro obchody s aplikacemi. Děkujeme vám za vaši podporu!",
         latestVersion: "Nejnovější",
-        homePageSection1Title: "Všechna vaše data ve vašich rukou",
-        homePageSection1Subtitle: "Provozujte svůj vlastní server a synchronizujte svá data.",
-        homePageSection2Title: "Jednoduché nastavení",
-        homePageSection2Subtitle: "Nastavení serveru už není jen pro vývojáře.",
-        homePageSection2Card1Title: "Žádné závislosti",
-        homePageSection2Card1Subtitle: "Není třeba instalovat další balíčky.",
-        homePageSection2Card2Title: "Vestavěná databáze",
-        homePageSection2Card2Subtitle: "Není nutné nastavovat externí databázi.",
-        homePageSection2Card3Title: "Víceplatforemní",
-        homePageSection2Card3Subtitle: "Server můžete snadno spustit na Windows, macOS nebo Linux.",
-        homePageSection2Card4Title: "Jednoduchá konfigurace",
-        homePageSection2Card4Subtitle: "Stačí upravit jeden textový soubor.",
-        homePageSection2Card5Title: "Čisté",
-        homePageSection2Card5Subtitle: "Server nezanechává nepotřebné soubory mimo svůj adresář.",
-        homePageSection2Card6Title: "Rychlý start",
-        homePageSection2Card6Subtitle: "Jen stáhněte a spusťte — tak jednoduché to je.",
-        homePageSection3Title: "Krásné na každé platformě",
-        homePageSection3Subtitle: "Zažijte minimalistický a praktický design s emocemi na všech platformách.",
-        homePageSection4Title: "Jeden server, synchronizujte vše",
-        homePageSection4Subtitle: "Synchronizujte všechna svá data snadno pomocí jednoho jednoduchého serveru.",
+        download: "Stáhnout",
+        notes: "Poznámky",
+        music: "Hudba",
+        photos: "Fotografie",
+        cloud: "Cloud",
+        server: "Server"
+    },
+    home: {
+        title: "Amphi Apps - Jeden server, synchronizujte vše",
+        hero: {
+            title: "Všechna vaše data ve vašich rukou",
+            subtitle: "Provozujte svůj vlastní server a synchronizujte svá data."
+        },
+        setup: {
+            title: "Jednoduché nastavení",
+            subtitle: "Nastavení serveru už není jen pro vývojáře.",
+            features: {
+                noDeps: {
+                    title: "Žádné závislosti",
+                    description: "Není třeba instalovat další balíčky."
+                },
+                builtInDb: {
+                    title: "Vestavěná databáze",
+                    description: "Není nutné nastavovat externí databázi."
+                },
+                crossPlatform: {
+                    title: "Víceplatforemní",
+                    description: "Server můžete snadno spustit na Windows, macOS nebo Linux."
+                },
+                simpleConfig: {
+                    title: "Jednoduchá konfigurace",
+                    description: "Stačí upravit jeden textový soubor."
+                },
+                clean: {
+                    title: "Čisté",
+                    description: "Server nezanechává nepotřebné soubory mimo svůj adresář."
+                },
+                quickStart: {
+                    title: "Rychlý start",
+                    description: "Jen stáhněte a spusťte — tak jednoduché to je."
+                }
+            }
+        },
+        design: {
+            title: "Krásné na každé platformě",
+            subtitle: "Zažijte minimalistický a praktický design s emocemi na všech platformách."
+        },
+        sync: {
+            title: "Jeden server, synchronizujte vše",
+            subtitle: "Synchronizujte všechna svá data snadno pomocí jednoho jednoduchého serveru."
+        },
         setupServer: "Nastavit server",
         downloadApps: "Stáhnout aplikace",
-        download: "Stáhnout",
-        downloadOnPackageManager: "Stáhnout přes správce balíčků",
-        downloadAPK: "Stáhnout APK",
         startNow: "Začít hned",
-        notesPageTitle: "Kde sídlí všechny vaše myšlenky",
-        notesPageSubtitle: "Pište své příběhy svobodně, kdykoli a kdekoliv.",
-        musicPageTitle: "Vaše oblíbená hudební knihovna",
-        musicPageSubtitle: "Užijte si své oblíbené skladby v nejlepší kvalitě — kdykoliv.",
-        serverPageTitle: "Váš druhý mozek, váš digitální domov",
-        serverPageSubtitle: "Synchronizujte všechny své poznámky, hudbu, fotky a soubory hladce",
-        
-        photosPageTitle: "Kde žijí vaše vzpomínky",
-        photosPageSubtitle: "Snadno zachyťte a znovu prožijte své oblíbené okamžiky",
-        homepage: "Domovská stránka"
+    },
+    notes: {
+        title: "Kde sídlí všechny vaše myšlenky",
+        subtitle: "Pište své příběhy svobodně, kdykoli a kdekoliv.",
+    },
+    music: {
+        title: "Vaše oblíbená hudební knihovna",
+        subtitle: "Užijte si své oblíbené skladby v nejlepší kvalitě — kdykoliv.",
+    },
+    photos: {
+        title: "Kde žijí vaše vzpomínky",
+        subtitle: "Snadno zachyťte a znovu prožijte své oblíbené okamžiky",
+    },
+    cloud: {
+        title: "My Digital Treasure Vault",
+        subtitle: "Keep your important files safe.",
+    },
+    server: {
+        title: "Váš druhý mozek, váš digitální domov",
+        subtitle: "Synchronizujte všechny své poznámky, hudbu, fotky a soubory hladce",
+        setupGuide: "Setup Guide",
+        youtubeTutorial: "YouTube Tutorial",
     }
 };
 
