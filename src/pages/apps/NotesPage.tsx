@@ -85,9 +85,16 @@ export default function NotesPage() {
         document.title = "Amphi Notes";
     }, [t, location]);
     const {selectedPlatform, setSelectedPlatform, notesDownloadOptions} = useStore();
-    const preview = selectedPlatform.value === "macos" || selectedPlatform.value === "ios"
-        ? "/images/notes-preview-apple.webp"
-        : "/images/notes-preview-libre.webp";
+    let preview: string = "/images/notes-preview-android-windows.webp";
+    switch (selectedPlatform.value) {
+        case "macos":
+        case "ios":
+            preview = "/images/notes-preview-apple.webp";
+            break;
+        case "linux":
+            preview = "/images/notes-preview-linux.webp";
+            break;
+    }
 
     return (
         <AppPage>
