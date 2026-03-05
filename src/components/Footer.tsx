@@ -56,16 +56,16 @@ function Footer() {
                 </Link>
             </LinksSection>
             <div>
-                <FooterButton href={"https://github.com/amphi2024"} target={"_blank"}>
+                <FooterButton title={"Github"} href={"https://github.com/amphi2024"} target={"_blank"}>
                     <FontAwesomeIcon icon={faGithub} />
                 </FooterButton>
-                <FooterButton href={"https://x.com/amphi2024"} target={"_blank"}>
+                <FooterButton title={"X"} href={"https://x.com/amphi2024"} target={"_blank"}>
                     <FontAwesomeIcon icon={faXTwitter}/>
                 </FooterButton>
-                <FooterButton rel={"me"} title={"Mastodon"} href={"https://mastodon.social/@amphi2024"} target={"_blank"}>
+                <FooterButton title={"Mastodon"} rel={"me"} href={"https://mastodon.social/@amphi2024"} target={"_blank"}>
                     <FontAwesomeIcon icon={faMastodon}/>
                 </FooterButton>
-                <FooterButton href={"https://youtube.com/@amphi2024"} target={"_blank"}>
+                <FooterButton title={"Youtube"} href={"https://youtube.com/@amphi2024"} target={"_blank"}>
                     <FontAwesomeIcon icon={faYoutube}/>
                 </FooterButton>
             </div>
