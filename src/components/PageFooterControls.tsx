@@ -11,6 +11,7 @@ const PageFooterControls = styled.div`
     flex-direction: row;
     justify-content: center;
     padding: 8px;
+    color: var(--text-color);
 `;
 
 const PageFooterControlButton = styled.button`
@@ -26,6 +27,8 @@ const PageFooterControlButton = styled.button`
     &:hover {
         background-color: rgba(125, 125, 125, 0.1);
     }
+
+    color: var(--text-color);
 `;
 
 export function ReturnButton() {
