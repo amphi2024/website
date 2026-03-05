@@ -8,14 +8,6 @@ const AppFooter = styled.footer`
         text-align: center;
         padding: 20px;
         background-color: var(--footer-background-color);
-
-        a {
-            font-size: 15px;
-            color: var(--text-color);
-            font-weight: bold;
-            margin: var(--item-margin);
-        }
-        
         svg {
             font-size: 30px;
         }
@@ -25,14 +17,24 @@ const AppFooter = styled.footer`
         }
     `;
 
-const FooterButton = styled.button`
+const LinksSection = styled.div`
+    a {
+        font-size: 15px;
+        color: var(--text-color);
+        font-weight: bold;
+        margin: var(--item-margin);   
+    }
+`;
+
+const FooterButton = styled.a`
     background-color: transparent;
     padding: 8px;
     font-size: 15px;
-    color: var(--text-color-secondary);
+    color: var(--text-color);
+    cursor: pointer;
     
     &:hover {
-        color: var(--text-color);
+        color: var(--text-color-secondary);
     }
 `
 
@@ -45,33 +47,25 @@ function Footer() {
             <div>
                 © 2026 Amphi
             </div>
-            <div>
+            <LinksSection>
                 <Link to={"/privacy"}>
                     {t("privacyPolicy")}
                 </Link>
                 <Link to={"/terms"}>
                     {t("termsAndCondition")}
                 </Link>
-            </div>
+            </LinksSection>
             <div>
-                <FooterButton onClick={() => {
-                    window.open("https://github.com/amphi2024", "_blank");
-                }}>
+                <FooterButton href={"https://github.com/amphi2024"} target={"_blank"}>
                     <FontAwesomeIcon icon={faGithub} />
                 </FooterButton>
-                <FooterButton onClick={() => {
-                    window.open("https://x.com/amphi2024", "_blank");
-                }}>
+                <FooterButton href={"https://x.com/amphi2024"} target={"_blank"}>
                     <FontAwesomeIcon icon={faXTwitter}/>
                 </FooterButton>
-                <FooterButton rel={"me"} onClick={() => {
-                    window.open("https://mastodon.social/@amphi2024", "_blank");
-                }}>
+                <FooterButton rel={"me"} href={"https://mastodon.social/@amphi2024"} target={"_blank"}>
                     <FontAwesomeIcon icon={faMastodon}/>
                 </FooterButton>
-                <FooterButton onClick={() => {
-                    window.open("https://youtube.com/@amphi2024", "_blank");
-                }}>
+                <FooterButton href={"https://youtube.com/@amphi2024"} target={"_blank"}>
                     <FontAwesomeIcon icon={faYoutube}/>
                 </FooterButton>
             </div>
