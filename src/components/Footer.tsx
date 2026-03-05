@@ -64,7 +64,7 @@ function Footer() {
                 }}>
                     <FontAwesomeIcon icon={faXTwitter}/>
                 </FooterButton>
-                <FooterButton onClick={() => {
+                <FooterButton rel={"me"} onClick={() => {
                     window.open("https://mastodon.social/@amphi2024", "_blank");
                 }}>
                     <FontAwesomeIcon icon={faMastodon}/>
