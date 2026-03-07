@@ -13,9 +13,9 @@ export default function TermsArchive() {
                     January 10, 2025 ~ March 7, 2026
                 </h3>
 
-                {/*<p>*/}
-                {/*    Difference from later versions: Updated contact email*/}
-                {/*</p>*/}
+                <p>
+                    Difference from later versions: Updated contact email
+                </p>
 
                 <h1>Terms of Service</h1>
                 <h5>

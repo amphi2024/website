@@ -13,9 +13,9 @@ export default function PrivacyPolicyArchive() {
                     July 25, 2025 ~ January 27, 2026
                 </h3>
 
-                {/*<p>*/}
-                {/*    Difference from later versions: Updated contact email*/}
-                {/*</p>*/}
+                <p>
+                    Difference from later versions: Updated contact email
+                </p>
 
                 <h1>Privacy Policy</h1>
                 <h5>
@@ -80,9 +80,9 @@ export default function PrivacyPolicyArchive() {
                     January 10, 2025 ~ July 25, 2025
                 </h3>
 
-                {/*<p>*/}
-                {/*    Difference from later versions: Separation of policies for Apps and Games*/}
-                {/*</p>*/}
+                <p>
+                    Difference from later versions: Separation of policies for Apps and Games
+                </p>
 
                 <h1>Privacy Policy</h1>
                 <h5>
