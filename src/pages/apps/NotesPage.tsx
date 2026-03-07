@@ -1,5 +1,4 @@
 import {AppPreview} from "../Home.tsx";
-import {useEffect} from "react";
 import {useTranslation} from "react-i18next";
 
 import {
@@ -9,7 +8,6 @@ import {
     LinkButton,
     SelectField
 } from "../../components/AppDownload.tsx";
-import { useLocation} from "react-router-dom";
 import {SelectButton} from "../../components/SelectButton.tsx";
 import {type DownloadOption, useStore} from "../../store";
 import {
@@ -25,6 +23,7 @@ import {
     SCOOP
 } from "../../downloadLinks";
 import {DownloadButton} from "../../components/DownloadButton.tsx";
+import {Helmet} from "react-helmet-async";
 
 const downloadOptions: Record<string, DownloadOption[]>  = {
     windows: [
@@ -79,11 +78,6 @@ function SelectDownloadOption() {
 export default function NotesPage() {
 
     const [t, i18n] = useTranslation();
-    const location = useLocation();
-
-    useEffect(() => {
-        document.title = "Amphi Notes";
-    }, [t, location]);
     const {selectedPlatform, setSelectedPlatform, notesDownloadOptions} = useStore();
     let preview: string = "/images/notes-preview-android-windows.webp";
     switch (selectedPlatform.value) {
@@ -97,44 +91,49 @@ export default function NotesPage() {
     }
 
     return (
-        <AppPage>
-            <AppPageSection>
-                <h1>
-                    {t("notes:title")}
-                </h1>
-                <h2>
-                    {t("notes:subtitle")}
-                </h2>
-                <AppPreview src={preview} alt={"Preview"} loading="eager"/>
+        <>
+            <Helmet>
+                <title>Amphi Notes</title>
+                <meta name="description" content={t("notes:description")}/>
+            </Helmet>
+            <AppPage>
+                <AppPageSection>
+                    <h1>
+                        {t("notes:title")}
+                    </h1>
+                    <h2>
+                        {t("notes:subtitle")}
+                    </h2>
+                    <AppPreview src={preview} alt={"Preview"} loading="eager"/>
 
-                <DownloadFieldContainer>
+                    <DownloadFieldContainer>
 
-                    <SelectField>
-                        <SelectButton items={platforms} selectedItem={selectedPlatform} setSelectedItem={(index) => {
-                            setSelectedPlatform(platforms[index]);
+                        <SelectField>
+                            <SelectButton items={platforms} selectedItem={selectedPlatform} setSelectedItem={(index) => {
+                                setSelectedPlatform(platforms[index]);
+                            }}/>
+
+                            <SelectDownloadOption/>
+
+                        </SelectField>
+
+                        <DownloadButton downloadOption={notesDownloadOptions[selectedPlatform.value]} onClick={() => {
+                            window.open(notesDownloadOptions[selectedPlatform.value].value, "_blank");
                         }}/>
 
-                        <SelectDownloadOption/>
+                        <LinkButton onClick={() => {
+                            window.open("https://github.com/amphi2024/notes/releases", "_blank");
+                        }}>{NOTES_VERSION} / {new Date(2026, 0, 27).toLocaleDateString(i18n.language, {
+                            month: 'short',
+                            day: 'numeric',
+                            year: 'numeric'})}
+                        </LinkButton>
 
-                    </SelectField>
+                    </DownloadFieldContainer>
 
-                    <DownloadButton downloadOption={notesDownloadOptions[selectedPlatform.value]} onClick={() => {
-                        window.open(notesDownloadOptions[selectedPlatform.value].value, "_blank");
-                    }}/>
+                </AppPageSection>
 
-                    <LinkButton onClick={() => {
-                        window.open("https://github.com/amphi2024/notes/releases", "_blank");
-                    }}>{NOTES_VERSION} / {new Date(2026, 0, 27).toLocaleDateString(i18n.language, {
-                        month: 'short',
-                        day: 'numeric',
-                        year: 'numeric'})}
-                    </LinkButton>
-
-                </DownloadFieldContainer>
-
-            </AppPageSection>
-
-        </AppPage>
-    )
-        ;
+            </AppPage>
+        </>
+    );
 }

@@ -1,13 +1,22 @@
 import Document from "../../components/Document.tsx";
 import {Link} from "react-router-dom";
+import {Helmet} from "react-helmet-async";
 
 export default function PrivacyPolicyArchive() {
     return (
         <>
+            <Helmet>
+                <title>Previous Privacy Policies</title>
+            </Helmet>
             <Document>
                 <h3>
                     July 25, 2025 ~ January 27, 2026
                 </h3>
+
+                {/*<p>*/}
+                {/*    Difference from later versions: Updated contact email*/}
+                {/*</p>*/}
+
                 <h1>Privacy Policy</h1>
                 <h5>
                     July 25, 2025
@@ -70,6 +79,10 @@ export default function PrivacyPolicyArchive() {
                 <h3>
                     January 10, 2025 ~ July 25, 2025
                 </h3>
+
+                {/*<p>*/}
+                {/*    Difference from later versions: Separation of policies for Apps and Games*/}
+                {/*</p>*/}
 
                 <h1>Privacy Policy</h1>
                 <h5>

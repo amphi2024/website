@@ -1,5 +1,4 @@
 import {AppPreview} from "../Home.tsx";
-import {useEffect} from "react";
 import {useTranslation} from "react-i18next";
 
 import {
@@ -9,7 +8,6 @@ import {
     LinkButton,
     SelectField
 } from "../../components/AppDownload.tsx";
-import {useLocation} from "react-router-dom";
 import {SelectButton} from "../../components/SelectButton.tsx";
 import {type DownloadOption, useStore} from "../../store";
 import {
@@ -25,8 +23,9 @@ import {
     SCOOP
 } from "../../downloadLinks";
 import {DownloadButton} from "../../components/DownloadButton.tsx";
+import {Helmet} from "react-helmet-async";
 
-const downloadOptions: Record<string, DownloadOption[]>  = {
+const downloadOptions: Record<string, DownloadOption[]> = {
     windows: [
         SCOOP,
         MUSIC_EXE,
@@ -64,7 +63,8 @@ function SelectDownloadOption() {
         case "linux":
         case "android":
             return (
-                <SelectButton items={downloadOptions[selectedPlatform.value]} selectedItem={musicDownloadOptions[selectedPlatform.value]} setSelectedItem={(index) => {
+                <SelectButton items={downloadOptions[selectedPlatform.value]}
+                              selectedItem={musicDownloadOptions[selectedPlatform.value]} setSelectedItem={(index) => {
                     setMusicDownloadOptions({
                         ...musicDownloadOptions,
                         [selectedPlatform.value]: downloadOptions[selectedPlatform.value][index]
@@ -79,11 +79,6 @@ function SelectDownloadOption() {
 export default function MusicPage() {
 
     const [t, i18n] = useTranslation();
-    const location = useLocation();
-
-    useEffect(() => {
-        document.title = "Amphi Music";
-    }, [t, location]);
     const {selectedPlatform, setSelectedPlatform, musicDownloadOptions} = useStore();
     let preview: string = "/images/music-preview-android-windows.webp";
     switch (selectedPlatform.value) {
@@ -97,44 +92,51 @@ export default function MusicPage() {
     }
 
     return (
-        <AppPage>
-            <AppPageSection>
-                <h1>
-                    {t("music:title")}
-                </h1>
-                <h2>
-                    {t("music:subtitle")}
-                </h2>
-                <AppPreview src={preview} alt={"Preview"} loading="eager"/>
+        <>
+            <Helmet>
+                <title>Amphi Music</title>
+                <meta name="description" content={t("music:description")}/>
+            </Helmet>
+            <AppPage>
+                <AppPageSection>
+                    <h1>
+                        {t("music:title")}
+                    </h1>
+                    <h2>
+                        {t("music:subtitle")}
+                    </h2>
+                    <AppPreview src={preview} alt={"Preview"} loading="eager"/>
 
-                <DownloadFieldContainer>
+                    <DownloadFieldContainer>
 
-                    <SelectField>
-                        <SelectButton items={platforms} selectedItem={selectedPlatform} setSelectedItem={(index) => {
-                            setSelectedPlatform(platforms[index]);
+                        <SelectField>
+                            <SelectButton items={platforms} selectedItem={selectedPlatform}
+                                          setSelectedItem={(index) => {
+                                              setSelectedPlatform(platforms[index]);
+                                          }}/>
+
+                            <SelectDownloadOption/>
+
+                        </SelectField>
+
+                        <DownloadButton downloadOption={musicDownloadOptions[selectedPlatform.value]} onClick={() => {
+                            window.open(musicDownloadOptions[selectedPlatform.value].value, "_blank");
                         }}/>
 
-                        <SelectDownloadOption/>
+                        <LinkButton onClick={() => {
+                            window.open("https://github.com/amphi2024/music/releases", "_blank");
+                        }}>{MUSIC_VERSION} / {new Date(2026, 1, 24).toLocaleDateString(i18n.language, {
+                            month: 'short',
+                            day: 'numeric',
+                            year: 'numeric'
+                        })}
+                        </LinkButton>
 
-                    </SelectField>
+                    </DownloadFieldContainer>
 
-                    <DownloadButton downloadOption={musicDownloadOptions[selectedPlatform.value]} onClick={() => {
-                        window.open(musicDownloadOptions[selectedPlatform.value].value, "_blank");
-                    }}/>
+                </AppPageSection>
 
-                    <LinkButton onClick={() => {
-                        window.open("https://github.com/amphi2024/music/releases", "_blank");
-                    }}>{MUSIC_VERSION} / {new Date(2026, 1, 24).toLocaleDateString(i18n.language, {
-                        month: 'short',
-                        day: 'numeric',
-                        year: 'numeric'})}
-                    </LinkButton>
-
-                </DownloadFieldContainer>
-
-            </AppPageSection>
-
-        </AppPage>
-    )
-        ;
+            </AppPage>
+        </>
+    );
 }

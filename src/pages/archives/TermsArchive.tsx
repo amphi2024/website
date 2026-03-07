@@ -1,10 +1,22 @@
 import Document from "../../components/Document.tsx";
 import {Link} from "react-router-dom";
+import {Helmet} from "react-helmet-async";
 
 export default function TermsArchive() {
     return (
         <>
+            <Helmet>
+                <title>Previous Terms of Service</title>
+            </Helmet>
             <Document>
+                <h3>
+                    January 10, 2025 ~ March 7, 2026
+                </h3>
+
+                {/*<p>*/}
+                {/*    Difference from later versions: Updated contact email*/}
+                {/*</p>*/}
+
                 <h1>Terms of Service</h1>
                 <h5>
                     January 10, 2025
