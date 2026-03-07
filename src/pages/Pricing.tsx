@@ -164,37 +164,6 @@ export function Pricing() {
                     <Card>
 
                         <h3>
-                            Clownfish
-                        </h3>
-
-                        <p>
-                            For syncing texts and small images
-                        </p>
-
-                        <Price>
-                            $0
-                            <span>
-                                /month
-                            </span>
-                        </Price>
-
-                        <StyledButton onClick={() => {
-                            // window.open("https://amphi2024.lemonsqueezy.com/checkout/buy/98fe7f37-edbb-4684-901e-825e5410636a", "_blank");
-                            window.open("https://docs.google.com/forms/d/e/1FAIpQLSd6mrlTGEVz3E18APKOZXIJu44pkkINfRaHvOfq_Zfub7HWyw/viewform?usp=publish-editor", "_blank");
-                        }}>
-                            Join Waitlist
-                        </StyledButton>
-
-                        <Lines>
-                            <li>10GB Storage</li>
-                            <li>500GB Monthly Transfer</li>
-                        </Lines>
-
-                    </Card>
-
-                    <Card>
-
-                        <h3>
                             Dolphin
                         </h3>
 
