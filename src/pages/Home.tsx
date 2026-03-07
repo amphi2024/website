@@ -266,11 +266,23 @@ function Home() {
                     {t("sync.subtitle")}
                 </p>
 
-                <Link to={"/server"}>
-                    <button>
-                        {t("setupServer")}
-                    </button>
-                </Link>
+                <div style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    gap: "10px",
+                }}>
+                    <Link to={"/server"}>
+                        <button>
+                            {t("setupServer")}
+                        </button>
+                    </Link>
+
+                    <Link to={"/pricing"}>
+                        <button>
+                            {t("common:pricing")}
+                        </button>
+                    </Link>
+                </div>
 
                 <h3>
                     {t("downloadApps")}
