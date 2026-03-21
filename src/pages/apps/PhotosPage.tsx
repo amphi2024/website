@@ -77,9 +77,16 @@ export default function PhotosPage() {
     const [t, i18n] = useTranslation();
 
     const {selectedPlatform, setSelectedPlatform, photosDownloadOptions} = useStore();
-    const preview = selectedPlatform.value === "macos" || selectedPlatform.value === "ios"
-        ? "/images/photos-preview-apple.png"
-        : "/images/photos-preview-libre.png";
+    let preview: string = "/images/photos-preview-android-windows.webp";
+    switch (selectedPlatform.value) {
+        case "macos":
+        case "ios":
+            preview = "/images/photos-preview-apple.webp";
+            break;
+        case "linux":
+            preview = "/images/photos-preview-linux.webp";
+            break;
+    }
 
     return (
         <>
