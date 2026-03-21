@@ -121,7 +121,7 @@ export default function PhotosPage() {
 
                         <LinkButton onClick={() => {
                             window.open("https://github.com/amphi2024/photos/releases", "_blank");
-                        }}>{PHOTOS_VERSION} / {new Date(2026, 0, 19).toLocaleDateString(i18n.language, {
+                        }}>{PHOTOS_VERSION} / {new Date(2026, 2, 21).toLocaleDateString(i18n.language, {
                             month: 'short',
                             day: 'numeric',
                             year: 'numeric'})}
