@@ -8,7 +8,7 @@ import {useTranslation} from "react-i18next";
 import styled from "styled-components";
 import {Helmet} from "react-helmet-async";
 
-const serverVersion = "3.1.0";
+const serverVersion = "3.1.1";
 
 const SetupGuide = styled.button`
     width: 220px;
@@ -53,7 +53,7 @@ export default function ServerPage() {
 
                     <LinkButton onClick={() => {
                         window.open("https://github.com/amphi2024/server/releases", "_blank");
-                    }}>{serverVersion} / {new Date(2026, 1, 3).toLocaleDateString(i18n.language, {
+                    }}>{serverVersion} / {new Date(2026, 2, 22).toLocaleDateString(i18n.language, {
                         month: 'short',
                         day: 'numeric',
                         year: 'numeric'
