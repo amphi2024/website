@@ -118,7 +118,7 @@ export default function CloudPage() {
 
                         <LinkButton onClick={() => {
                             window.open("https://github.com/amphi2024/cloud/releases", "_blank");
-                        }}>{CLOUD_VERSION} / {new Date(2025, 9, 9).toLocaleDateString(i18n.language, {
+                        }}>{CLOUD_VERSION} / {new Date(2026, 3, 18).toLocaleDateString(i18n.language, {
                             month: 'short',
                             day: 'numeric',
                             year: 'numeric'})}
