@@ -81,9 +81,16 @@ export default function CloudPage() {
     const [t, i18n] = useTranslation();
 
     const {selectedPlatform, setSelectedPlatform, cloudDownloadOptions} = useStore();
-    const preview = selectedPlatform.value === "macos" || selectedPlatform.value === "ios"
-        ? "/images/cloud-preview-apple.png"
-        : "/images/cloud-preview-libre.png";
+    let preview: string = "/images/cloud-preview-android-windows.webp";
+    switch (selectedPlatform.value) {
+        case "macos":
+        case "ios":
+            preview = "/images/cloud-preview-apple.webp";
+            break;
+        case "linux":
+            preview = "/images/cloud-preview-linux.webp";
+            break;
+    }
 
     return (
         <>
